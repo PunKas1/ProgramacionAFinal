@@ -2,6 +2,7 @@
 #define SERVERSOCKET_H
 
 #include <netinet/in.h>
+#include <string>
 
 class ServerSocket {
 private:
@@ -20,8 +21,8 @@ public:
     bool bindear();
     bool escuchar(int espera = 5);
     bool aceptar();
-    void recibir();
-    void enviarRespuesta();
+    std::string recibir();
+    void enviarRespuesta(std::string mensaje);
     void cerrar();
 
 };

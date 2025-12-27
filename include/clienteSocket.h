@@ -2,6 +2,7 @@
 #define CLIENTESOCKET_H
 
 #include<netinet/in.h>
+#include<string>
 
 class ClienteSocket{
     private:
@@ -17,7 +18,7 @@ class ClienteSocket{
         bool crear();
         bool conectar(const char* ip, int puerto);
         void enviar(const char* mensaje);
-        void recibir();
+        std::string recibir();
         void cerrar();
 
 };

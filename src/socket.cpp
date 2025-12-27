@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 #include <cstring>
+#include <string>
 
 using namespace std;
 
@@ -74,19 +75,19 @@ bool ServerSocket::aceptar() {
 }
 
 // 6 - Recibir
-void ServerSocket::recibir() {
+std::string ServerSocket::recibir() {
     char buffer[1024] = {0};
     int bytesRead = recv(clienteSocket, buffer, sizeof(buffer), 0);
 
     if (bytesRead > 0) {
-        cout << "Mensaje recibido: " << buffer << endl;
+        return std::string(buffer);
     }
+    return "";
 }
 
 // 7 - Enviar
-void ServerSocket::enviarRespuesta() {
-    const char* respuesta = "Hola desde el servidor";
-    send(clienteSocket, respuesta, strlen(respuesta), 0);
+void ServerSocket::enviarRespuesta(std::string mensaje) {
+    send(clienteSocket, mensaje.c_str(), mensaje.length(), 0);
 }
 
 // 8 - Cerrar

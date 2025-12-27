@@ -43,12 +43,13 @@ void ClienteSocket::enviar(const char* mensaje){
     send(clienteSocket,mensaje,strlen(mensaje),0);
 }
 
-void ClienteSocket::recibir(){
+std::string ClienteSocket::recibir(){
     char buffer[1024] = {0};
     int bytesLeidos = recv(clienteSocket,buffer,sizeof(buffer),0);
     if(bytesLeidos > 0){
-        cout <<"SERVIDOR DICE: "<<buffer<<endl;
+        return std::string(buffer);
     }
+    return "";
 }
 
 void ClienteSocket::cerrar(){
