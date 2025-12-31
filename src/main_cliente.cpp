@@ -1,11 +1,14 @@
 #include "../include/clienteSocket.h"
 #include "../include/chat.h"
+
 #include <SFML/Graphics.hpp>
 #include <thread>
 #include <iostream>
+#include <cstdint>
 
-// IMPORTANTE: Definir la función ANTES del main para evitar errores de compilación
-void hiloRedCliente(ClienteSocket* cliente, Chat* manager) {
+// ================= HILO DE RED =================
+void hiloRedCliente(ClienteSocket* cliente, Chat* manager)
+{
     while (true) {
         std::string mensaje = cliente->recibir();
         if (!mensaje.empty()) {
@@ -14,72 +17,89 @@ void hiloRedCliente(ClienteSocket* cliente, Chat* manager) {
     }
 }
 
-int main() {
+// ================= MAIN =================
+int main()
+{
     ClienteSocket cliente;
     Chat miChat;
 
-    // Conexión inicial
-    if (!cliente.crear() || !cliente.conectar("127.0.0.1", 8080)) {
-        std::cout << "Error: No se pudo conectar al servidor de soporte." << std::endl;
+    if (!cliente.crear() ||
+        !cliente.conectar("127.0.0.1", 8080))
+    {
+        std::cerr << "No se pudo conectar al servidor\n";
         return -1;
     }
 
-    // Iniciar hilo de red de forma asíncrona
-    std::thread t(hiloRedCliente, &cliente, &miChat);
-    t.detach();
+    std::thread red(hiloRedCliente, &cliente, &miChat);
+    red.detach();
 
-    // Configuración de Ventana SFML
-    sf::RenderWindow window(sf::VideoMode(400, 600), "Chat de Atencion al Cliente");
+    // ================= VENTANA =================
+    sf::RenderWindow window(
+        sf::VideoMode({400, 600}),
+        "Chat - Cliente"
+    );
+
     sf::Font font;
-    if (!font.loadFromFile("arial.ttf")) return -1;
+    if (!font.openFromFile("arial.ttf")) {
+        std::cerr << "No se pudo abrir la fuente\n";
+        return -1;
+    }
 
-    sf::Text textoVisual;
-    textoVisual.setFont(font);
-    textoVisual.setCharacterSize(16);
+    std::string inputTexto;
 
-    std::string inputTexto = "";
-
+    // ================= LOOP =================
     while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed) window.close();
 
-            // Captura de texto por teclado
-            if (event.type == sf::Event::TextEntered) {
-                if (event.text.unicode == '\r' || event.text.unicode == '\n') {
+        while (auto event = window.pollEvent()) {
+
+            // Cerrar ventana
+            if (event->is<sf::Event::Closed>()) {
+                window.close();
+            }
+
+            // Entrada de texto (SFML 3)
+            if (const auto* texto =
+                event->getIf<sf::Event::TextEntered>())
+            {
+                std::uint32_t unicode = texto->unicode;
+
+                if (unicode == '\n' || unicode == '\r') {
                     if (!inputTexto.empty()) {
                         cliente.enviar(inputTexto.c_str());
                         miChat.agregarMensaje("Yo", inputTexto, true);
-                        inputTexto = "";
+                        inputTexto.clear();
                     }
-                } else if (event.text.unicode == 8 && !inputTexto.empty()) { // Backspace
+                }
+                else if (unicode == 8 && !inputTexto.empty()) {
                     inputTexto.pop_back();
-                } else if (event.text.unicode < 128) {
-                    inputTexto += static_cast<char>(event.text.unicode);
+                }
+                else if (unicode < 128) {
+                    inputTexto += static_cast<char>(unicode);
                 }
             }
         }
 
+        // ================= DIBUJO =================
         window.clear(sf::Color(45, 45, 45));
 
-        // Renderizar historial de chat
-        auto historial = miChat.obtenerHistorial();
-        float y = 10;
-        for (auto& m : historial) {
-            textoVisual.setString(m.emisor + ": " + m.texto);
-            textoVisual.setPosition(10, y);
-            textoVisual.setFillColor(m.esMio ? sf::Color::Green : sf::Color::White);
-            window.draw(textoVisual);
-            y += 25;
+        float y = 10.f;
+        for (const auto& m : miChat.obtenerHistorial()) {
+            sf::Text linea(font, m.emisor + ": " + m.texto, 16);
+            linea.setPosition({10.f, y});
+            linea.setFillColor(
+                m.esMio ? sf::Color::Green : sf::Color::White
+            );
+            window.draw(linea);
+            y += 24.f;
         }
 
-        // Mostrar lo que se está escribiendo actualmente
-        sf::Text actual("> " + inputTexto + "_", font, 18);
-        actual.setPosition(10, 560);
+        sf::Text actual(font, "> " + inputTexto + "_", 18);
+        actual.setPosition({10.f, 560.f});
         actual.setFillColor(sf::Color::Yellow);
         window.draw(actual);
 
         window.display();
     }
+
     return 0;
 }

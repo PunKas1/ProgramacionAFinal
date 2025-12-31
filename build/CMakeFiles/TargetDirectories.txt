@@ -1,0 +1,4 @@
+/Users/macbookair/Documents/Programacion_Avanzada/Proyecto/ProgramacionAFinal/build/CMakeFiles/servidor.dir
+/Users/macbookair/Documents/Programacion_Avanzada/Proyecto/ProgramacionAFinal/build/CMakeFiles/cliente.dir
+/Users/macbookair/Documents/Programacion_Avanzada/Proyecto/ProgramacionAFinal/build/CMakeFiles/edit_cache.dir
+/Users/macbookair/Documents/Programacion_Avanzada/Proyecto/ProgramacionAFinal/build/CMakeFiles/rebuild_cache.dir

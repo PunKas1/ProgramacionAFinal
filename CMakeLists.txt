@@ -1,20 +1,50 @@
 cmake_minimum_required(VERSION 3.15)
-project(ProyectoFinal)
+project(ProyectoFinal LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# 1. Buscar SFML
-find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-# 2. Archivos comunes (Lógica de red y ChatManager)
-set(COMMON_SOURCES src/socket.cpp src/chat.cpp)
 
-# 3. Compilar Servidor
-add_executable(servidor src/main_server.cpp ${COMMON_SOURCES})
+set(SFML_DIR "/opt/homebrew/lib/cmake/SFML")
+
+find_package(SFML 3 REQUIRED COMPONENTS Graphics Window System)
+
+set(COMMON_SOURCES
+    src/socket.cpp
+    src/chat.cpp
+)
+
+# Servidor
+add_executable(servidor
+    src/main_server.cpp
+    ${COMMON_SOURCES}
+)
+
 target_include_directories(servidor PUBLIC include)
-target_link_libraries(servidor sfml-graphics sfml-window sfml-system pthread)
+target_link_libraries(servidor
+    sfml-graphics
+    sfml-window
+    sfml-system
+)
 
-# 4. Compilar Cliente
-add_executable(cliente src/main_cliente.cpp src/clienteSocket.cpp ${COMMON_SOURCES})
+target_compile_definitions(servidor PRIVATE BUILD_SERVER)
+
+# Cliente
+add_executable(cliente
+    src/main_cliente.cpp
+    src/clienteSocket.cpp
+    ${COMMON_SOURCES}
+)
+
 target_include_directories(cliente PUBLIC include)
-target_link_libraries(cliente sfml-graphics sfml-window sfml-system pthread)
+target_link_libraries(cliente
+    sfml-graphics
+    sfml-window
+    sfml-system
+)
+
+target_compile_definitions(cliente PRIVATE BUILD_CLIENT)
+
+

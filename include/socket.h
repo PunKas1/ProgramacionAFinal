@@ -1,3 +1,4 @@
+#pragma once
 #ifndef SERVERSOCKET_H
 #define SERVERSOCKET_H
 

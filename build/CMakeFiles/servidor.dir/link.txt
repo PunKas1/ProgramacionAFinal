@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/servidor.dir/src/main_server.cpp.o CMakeFiles/servidor.dir/src/socket.cpp.o CMakeFiles/servidor.dir/src/chat.cpp.o -o bin/servidor  -lsfml-graphics -lsfml-window -lsfml-system
