@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.24)
 project(ProyectoFinal LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -6,45 +6,35 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
+# --- BLOQUE PARA SFML 3 ---
+include(FetchContent)
+FetchContent_Declare(
+    SFML
+    GIT_REPOSITORY https://github.com/SFML/SFML.git
+    GIT_TAG      3.0.0
+)
+FetchContent_MakeAvailable(SFML)
 
-set(SFML_DIR "/opt/homebrew/lib/cmake/SFML")
-
-find_package(SFML 3 REQUIRED COMPONENTS Graphics Window System)
-
-set(COMMON_SOURCES
-    src/socket.cpp
+# --- SERVIDOR ---
+# Agregamos src/socket.cpp porque ahí es donde suele estar la lógica del servidor
+add_executable(servidor 
+    src/main_server.cpp 
     src/chat.cpp
+    src/socket.cpp
 )
-
-# Servidor
-add_executable(servidor
-    src/main_server.cpp
-    ${COMMON_SOURCES}
-)
-
 target_include_directories(servidor PUBLIC include)
-target_link_libraries(servidor
-    sfml-graphics
-    sfml-window
-    sfml-system
-)
+target_link_libraries(servidor PRIVATE sfml-graphics sfml-window sfml-system sfml-network)
 
-target_compile_definitions(servidor PRIVATE BUILD_SERVER)
-
-# Cliente
-add_executable(cliente
-    src/main_cliente.cpp
+# --- CLIENTE ---
+# Agregamos src/clienteSocket.cpp porque ahí es donde definiste ClienteSocket
+add_executable(cliente 
+    src/main_cliente.cpp 
+    src/chat.cpp
     src/clienteSocket.cpp
-    ${COMMON_SOURCES}
 )
-
 target_include_directories(cliente PUBLIC include)
-target_link_libraries(cliente
-    sfml-graphics
-    sfml-window
-    sfml-system
-)
+target_link_libraries(cliente PRIVATE sfml-graphics sfml-window sfml-system sfml-network)
 
-target_compile_definitions(cliente PRIVATE BUILD_CLIENT)
-
-
+# Copiar fuente
+file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/arial.ttf"
+     DESTINATION "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")

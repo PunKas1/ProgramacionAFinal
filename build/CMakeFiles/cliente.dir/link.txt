@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cliente.dir/src/main_cliente.cpp.o CMakeFiles/cliente.dir/src/clienteSocket.cpp.o CMakeFiles/cliente.dir/src/socket.cpp.o CMakeFiles/cliente.dir/src/chat.cpp.o -o bin/cliente  -lsfml-graphics -lsfml-window -lsfml-system
