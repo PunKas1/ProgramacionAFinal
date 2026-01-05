@@ -4,16 +4,19 @@
 
 #include <netinet/in.h>
 #include <string>
+#include <queue>
+#include <mutex>
 
 class ServerSocket {
 private:
     int serverSocket;
-    int clienteSocket;
+    int clienteActual;
     sockaddr_in serverAddr;
-    sockaddr_in clienteAddr;
-    socklen_t clienteLen;
 
 public:
+    std::queue<int> colaClientes;
+    std::mutex mtxCola;
+
     ServerSocket();
     ~ServerSocket();
 
@@ -21,11 +24,15 @@ public:
     bool configurar(const char* ip, int puerto);
     bool bindear();
     bool escuchar(int espera = 5);
-    bool aceptar();
-    std::string recibir();
-    void enviarRespuesta(std::string mensaje);
-    void cerrar();
 
+    void aceptarClientes();      
+    bool tomarSiguienteCliente(); 
+
+    std::string recibir();
+    void enviar(const std::string& msg);
+
+    void cerrarCliente();
+    void cerrarServidor();
 };
 
-#endif // SERVERSOCKET_H
+#endif
