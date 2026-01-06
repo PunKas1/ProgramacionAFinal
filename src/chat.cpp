@@ -9,3 +9,7 @@ std::vector<Mensaje> Chat::obtenerHistorial(){
     std::lock_guard<std::mutex> lock(mtx);
     return historial;
 }
+void Chat::limpiarHistorial() {
+    std::lock_guard<std::mutex> lock(mtx); 
+    historial.clear(); 
+}
