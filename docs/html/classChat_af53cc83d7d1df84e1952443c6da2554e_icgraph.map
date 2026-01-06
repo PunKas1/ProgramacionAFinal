@@ -1,0 +1,12 @@
+<map id="Chat::agregarMensaje" name="Chat::agregarMensaje">
+<area shape="rect" id="Node000001" title="Inserta un nuevo mensaje en el historial de forma segura." alt="" coords="264,56,413,83"/>
+<area shape="rect" id="Node000002" href="$main__cliente_8cpp.html#a1f5ab905765ecc5efc5dc01d8f63421e" title="Función del Hilo Secundario: Escucha al servidor." alt="" coords="106,5,212,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="273,54,209,35,210,30,275,49"/>
+<area shape="rect" id="Node000003" href="$main__cliente_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Hilo Principal (UI Thread)." alt="" coords="5,31,55,57"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="248,65,55,49,55,43,249,59"/>
+<area shape="rect" id="Node000004" href="$main__server_8cpp.html#ad9d9b85a0d58433bb367fa045ae09f51" title="Función ejecutada por el Hilo Lector (Reader Thread)." alt="" coords="103,107,216,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="275,90,210,109,209,104,273,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="92,35,55,42,54,37,91,29"/>
+<area shape="rect" id="Node000005" href="$main__server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Hilo Principal (UI Thread)." alt="" coords="5,107,55,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="87,123,55,123,55,117,87,117"/>
+</map>

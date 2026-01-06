@@ -1,0 +1,73 @@
+\doxysection{socket.\+h}
+\hypertarget{socket_8h_source}{}\label{socket_8h_source}\index{include/socket.h@{include/socket.h}}
+\mbox{\hyperlink{socket_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ SERVERSOCKET\_H}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ SERVERSOCKET\_H}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <netinet/in.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <vector>}\ \textcolor{comment}{//\ Necesario\ para\ std::vector}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <mutex>}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structInfoCliente}{InfoCliente}}\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structInfoCliente_ab03f499c056e659348794588709b007a}{socket}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structInfoCliente_a1dac9b857c573fd9077ea8e9ade07d0d}{id}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ std::string\ \mbox{\hyperlink{structInfoCliente_ac5775305f75a4b5d21ab5201db6bf518}{nombre}};\ }
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classServerSocket_a2b3098589541243241ca25495155186c}{ServerSocket}}\ \{}
+\DoxyCodeLine{00044\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classServerSocket_a7dcc428768812210c5e00abbd68cd9cc}{serverSocket}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classServerSocket_a2183a4115ebb3e3bc13fa0f8c35c43f3}{clienteActual}};\ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ sockaddr\_in\ \mbox{\hyperlink{classServerSocket_a0c3362cb3371c5b521ec51e068ef408d}{serverAddr}};\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classServerSocket_a4772fc6ab28c449777b8811074ecd56c}{contadorID}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \ \ std::queue<int>\ \mbox{\hyperlink{classServerSocket_af71f918ccba38573d9b3533fc07e28bb}{colaClientes}};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \ \ std::vector<InfoCliente>\ \mbox{\hyperlink{classServerSocket_acdbcfe4963922584211482b08022c85b}{listaClientes}};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00069\ \ \ \ \ std::mutex\ \mbox{\hyperlink{classServerSocket_abefc51098ff2728273fd66cb9c479b5e}{mtxCola}};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{classServerSocket_a2b3098589541243241ca25495155186c}{ServerSocket}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{classServerSocket_a510674d924c2544e6b0069e39c36516b}{\string~ServerSocket}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServerSocket_aed4f954cffee07ff80d8ce540ba8cefb}{crear}}();}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServerSocket_ad5cac02fb407df331c377d7cfb2731be}{configurar}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ ip,\ \textcolor{keywordtype}{int}\ puerto);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServerSocket_a1a9dac66adae3be62dc422d16dd07fec}{bindear}}();}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServerSocket_a9312853ed94ee2ff0a9bcc9b19fdaf08}{escuchar}}(\textcolor{keywordtype}{int}\ espera\ =\ 5);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classServerSocket_aa3909d8893c14aa0c1498312af89adc1}{aceptarClientes}}();\ \ \ \ \ \ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServerSocket_a54e233b0852ed5cd338af48353f4868b}{tomarSiguienteCliente}}();\ }
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00123\ \ \ \ \ std::string\ \mbox{\hyperlink{classServerSocket_aa2caeb9ab043b2f1f86dd7deeaefa28a}{obtenerNombrePorSocket}}(\textcolor{keywordtype}{int}\ socket);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00128\ \ \ \ \ std::string\ \mbox{\hyperlink{classServerSocket_a882e25aade6e7c1be34dca9c48340728}{recibir}}();}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classServerSocket_a83e5e2a03d21e3e383a3e67aa3e4a8fc}{enviar}}(\textcolor{keyword}{const}\ std::string\&\ msg);}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classServerSocket_adbaa6db4d33a8630023710499f126cb4}{cerrarCliente}}();}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classServerSocket_a5c51707d83e73df462c3095c00f69d60}{cerrarServidor}}();}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classServerSocket_a1cad4604560488599b66eebe8d590682}{getClienteActual}}();}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServerSocket_a4659d477cc4d9140064cdaf33c57d3c4}{hayClientesEnCola}}();}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classServerSocket_a45a66da337baf176de70f6a054bfa74d}{estoyAtendiendo}}();}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classServerSocket_a26559e98b94c989b0011a096d06a163b}{liberarClienteActual}}();}
+\DoxyCodeLine{00167\ \};}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

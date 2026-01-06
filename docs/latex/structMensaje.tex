@@ -1,0 +1,78 @@
+\doxysection{Mensaje Struct Reference}
+\hypertarget{structMensaje}{}\label{structMensaje}\index{Mensaje@{Mensaje}}
+
+
+Estructura de datos simple que representa un único mensaje de texto.  
+
+
+
+
+{\ttfamily \#include $<$chat.\+h$>$}
+
+
+
+Collaboration diagram for Mensaje\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{structMensaje__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structMensaje_a0ec702d03bfa8031f770c3e804895a8a}{emisor}}
+\begin{DoxyCompactList}\small\item\em Nombre o ID de quien envió el mensaje (ej. "{}\+Cliente 1"{}, "{}\+Soporte"{}). \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structMensaje_a603a1ad791f7dffb5824c0caeecd1618}{texto}}
+\begin{DoxyCompactList}\small\item\em El contenido del mensaje. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structMensaje_ad7de259f977616ea3a9396e961853b69}{es\+Mio}}
+\begin{DoxyCompactList}\small\item\em Flag booleana para la UI\+: true=Derecha (Verde), false=Izquierda (Blanco). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Estructura de datos simple que representa un único mensaje de texto. 
+
+
+\begin{DoxyItemize}
+\item Se utiliza struct en lugar de class porque solo necesitamos un contenedor de datos público sin lógica compleja interna. 
+\end{DoxyItemize}
+
+\label{doc-variable-members}
+\Hypertarget{structMensaje_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structMensaje_a0ec702d03bfa8031f770c3e804895a8a}\index{Mensaje@{Mensaje}!emisor@{emisor}}
+\index{emisor@{emisor}!Mensaje@{Mensaje}}
+\doxysubsubsection{\texorpdfstring{emisor}{emisor}}
+{\footnotesize\ttfamily \label{structMensaje_a0ec702d03bfa8031f770c3e804895a8a} 
+std\+::string Mensaje\+::emisor}
+
+
+
+Nombre o ID de quien envió el mensaje (ej. "{}\+Cliente 1"{}, "{}\+Soporte"{}). 
+
+\Hypertarget{structMensaje_ad7de259f977616ea3a9396e961853b69}\index{Mensaje@{Mensaje}!esMio@{esMio}}
+\index{esMio@{esMio}!Mensaje@{Mensaje}}
+\doxysubsubsection{\texorpdfstring{esMio}{esMio}}
+{\footnotesize\ttfamily \label{structMensaje_ad7de259f977616ea3a9396e961853b69} 
+bool Mensaje\+::es\+Mio}
+
+
+
+Flag booleana para la UI\+: true=Derecha (Verde), false=Izquierda (Blanco). 
+
+\Hypertarget{structMensaje_a603a1ad791f7dffb5824c0caeecd1618}\index{Mensaje@{Mensaje}!texto@{texto}}
+\index{texto@{texto}!Mensaje@{Mensaje}}
+\doxysubsubsection{\texorpdfstring{texto}{texto}}
+{\footnotesize\ttfamily \label{structMensaje_a603a1ad791f7dffb5824c0caeecd1618} 
+std\+::string Mensaje\+::texto}
+
+
+
+El contenido del mensaje. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{chat_8h}{chat.\+h}}\end{DoxyCompactItemize}

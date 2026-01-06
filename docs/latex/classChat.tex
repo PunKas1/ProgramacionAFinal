@@ -1,0 +1,211 @@
+\doxysection{Chat Class Reference}
+\hypertarget{classChat}{}\label{classChat}\index{Chat@{Chat}}
+
+
+Clase gestora del historial de la conversación.  
+
+
+
+
+{\ttfamily \#include $<$chat.\+h$>$}
+
+
+
+Collaboration diagram for Chat\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{classChat__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classChat_a4427e061b727c06cccca9626cc0cf9c8}{Chat}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. Inicializa un historial vacío. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classChat_af53cc83d7d1df84e1952443c6da2554e}{agregar\+Mensaje}} (std\+::string emisor, std\+::string texto, bool es\+Mio)
+\begin{DoxyCompactList}\small\item\em Inserta un nuevo mensaje en el historial de forma segura. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structMensaje}{Mensaje}} $>$ \mbox{\hyperlink{classChat_a82a5db8e25c485af7ce2d2135a85583f}{obtener\+Historial}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene una COPIA del historial actual para ser dibujada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classChat_a79939f88cfd296f84e43078975f7c134}{limpiar\+Historial}} ()
+\begin{DoxyCompactList}\small\item\em Borra todos los mensajes almacenados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structMensaje}{Mensaje}} $>$ \mbox{\hyperlink{classChat_a8541315a79c38ef3764be4dd786b3bcf}{historial}}
+\begin{DoxyCompactList}\small\item\em Contenedor dinámico de mensajes. \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{classChat_ac098b99381f685fe4907ccaef94c9e92}{mtx}}
+\begin{DoxyCompactList}\small\item\em Semáforo de exclusión mutua. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase gestora del historial de la conversación. 
+
+
+\begin{DoxyItemize}
+\item Esta clase actúa como un recurso compartido entre\+:
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item El Hilo de Red (que escribe mensajes recibidos).
+\item El Hilo Gráfico/\+Main (que lee mensajes para dibujarlos).
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item Utiliza un Mutex para evitar Condiciones de Carrera (Race Conditions). 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{classChat_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classChat_a4427e061b727c06cccca9626cc0cf9c8}\index{Chat@{Chat}!Chat@{Chat}}
+\index{Chat@{Chat}!Chat@{Chat}}
+\doxysubsubsection{\texorpdfstring{Chat()}{Chat()}}
+{\footnotesize\ttfamily \label{classChat_a4427e061b727c06cccca9626cc0cf9c8} 
+Chat\+::\+Chat (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor por defecto. Inicializa un historial vacío. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{classChat_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classChat_af53cc83d7d1df84e1952443c6da2554e}\index{Chat@{Chat}!agregarMensaje@{agregarMensaje}}
+\index{agregarMensaje@{agregarMensaje}!Chat@{Chat}}
+\doxysubsubsection{\texorpdfstring{agregarMensaje()}{agregarMensaje()}}
+{\footnotesize\ttfamily \label{classChat_af53cc83d7d1df84e1952443c6da2554e} 
+void Chat\+::agregar\+Mensaje (\begin{DoxyParamCaption}\item[{std\+::string}]{emisor}{, }\item[{std\+::string}]{texto}{, }\item[{bool}]{es\+Mio}{}\end{DoxyParamCaption})}
+
+
+
+Inserta un nuevo mensaje en el historial de forma segura. 
+
+Agrega un mensaje al vector de forma segura (Thread-\/\+Safe).
+
+
+\begin{DoxyParams}{Parameters}
+{\em emisor} & El nombre de quien envía. \\
+\hline
+{\em texto} & El contenido del mensaje. \\
+\hline
+{\em es\+Mio} & Define si el mensaje lo escribí yo (true) o me llegó (false).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item Utiliza el patrón RAII para el bloqueo\+: El mutex se bloquea al crear \textquotesingle{}lock\textquotesingle{} y se desbloquea AUTOMÁ\+TICAMENTE cuando la función termina (se cierra la llave).
+\item 
+\begin{DoxyParams}{Parameters}
+{\em emisor} & Quién envía el mensaje. \\
+\hline
+{\em texto} & Contenido del mensaje. \\
+\hline
+{\em es\+Mio} & Booleano para determinar el color de la burbuja en la UI. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChat_af53cc83d7d1df84e1952443c6da2554e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classChat_a79939f88cfd296f84e43078975f7c134}\index{Chat@{Chat}!limpiarHistorial@{limpiarHistorial}}
+\index{limpiarHistorial@{limpiarHistorial}!Chat@{Chat}}
+\doxysubsubsection{\texorpdfstring{limpiarHistorial()}{limpiarHistorial()}}
+{\footnotesize\ttfamily \label{classChat_a79939f88cfd296f84e43078975f7c134} 
+void Chat\+::limpiar\+Historial (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Borra todos los mensajes almacenados. 
+
+Vacia el vector de mensajes.
+
+
+\begin{DoxyItemize}
+\item Utilizado cuando se cambia de cliente o se cierra una sesión, para asegurar que el siguiente usuario empiece con la pantalla limpia.
+\item Se utiliza al cambiar de cliente para limpiar la pantalla. 
+\end{DoxyItemize}Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{classChat_a79939f88cfd296f84e43078975f7c134_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classChat_a82a5db8e25c485af7ce2d2135a85583f}\index{Chat@{Chat}!obtenerHistorial@{obtenerHistorial}}
+\index{obtenerHistorial@{obtenerHistorial}!Chat@{Chat}}
+\doxysubsubsection{\texorpdfstring{obtenerHistorial()}{obtenerHistorial()}}
+{\footnotesize\ttfamily \label{classChat_a82a5db8e25c485af7ce2d2135a85583f} 
+std\+::vector$<$ \mbox{\hyperlink{structMensaje}{Mensaje}} $>$ Chat\+::obtener\+Historial (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Obtiene una COPIA del historial actual para ser dibujada. 
+
+Devuelve una copia instantánea del chat actual.
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Mensaje$>$ Una copia segura de los mensajes.
+\begin{DoxyItemize}
+\item Se devuelve por valor (copia) y no por referencia para que el hilo gráfico pueda dibujar tranquilo sin bloquear al hilo de red por mucho tiempo.
+\item Es necesario bloquear también para LEER, porque si el vector se redimensiona (realloc) mientras lo leemos, el programa crashearía.
+\item 
+\end{DoxyItemize}
+
+std\+::vector$<$\+Mensaje$>$ Copia completa del historial. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChat_a82a5db8e25c485af7ce2d2135a85583f_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classChat_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classChat_a8541315a79c38ef3764be4dd786b3bcf}\index{Chat@{Chat}!historial@{historial}}
+\index{historial@{historial}!Chat@{Chat}}
+\doxysubsubsection{\texorpdfstring{historial}{historial}}
+{\footnotesize\ttfamily \label{classChat_a8541315a79c38ef3764be4dd786b3bcf} 
+std\+::vector$<$\mbox{\hyperlink{structMensaje}{Mensaje}}$>$ Chat\+::historial\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Contenedor dinámico de mensajes. 
+
+
+\begin{DoxyItemize}
+\item Se eligió std\+::vector por sobre std\+::list o arreglos fijos porque\+:
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item Permite acceso rápido e iteración secuencial (ideal para dibujar 60 FPS).
+\item Crece dinámicamente según sea necesario. 
+\end{DoxyEnumerate}\Hypertarget{classChat_ac098b99381f685fe4907ccaef94c9e92}\index{Chat@{Chat}!mtx@{mtx}}
+\index{mtx@{mtx}!Chat@{Chat}}
+\doxysubsubsection{\texorpdfstring{mtx}{mtx}}
+{\footnotesize\ttfamily \label{classChat_ac098b99381f685fe4907ccaef94c9e92} 
+std\+::mutex Chat\+::mtx\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Semáforo de exclusión mutua. 
+
+
+\begin{DoxyItemize}
+\item Este objeto es CRITICO. Bloquea el acceso al vector mientras un hilo está escribiendo, obligando al otro a esperar. Sin esto, el programa crashearía al intentar leer y escribir memoria simultáneamente. 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{chat_8h}{chat.\+h}}\item 
+src/\mbox{\hyperlink{chat_8cpp}{chat.\+cpp}}\end{DoxyCompactItemize}

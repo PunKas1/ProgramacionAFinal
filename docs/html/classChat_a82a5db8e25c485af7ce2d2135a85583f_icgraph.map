@@ -1,0 +1,9 @@
+<map id="Chat::obtenerHistorial" name="Chat::obtenerHistorial">
+<area shape="rect" id="Node000001" title="Obtiene una COPIA del historial actual para ser dibujada." alt="" coords="264,31,412,57"/>
+<area shape="rect" id="Node000002" href="$main__server_8cpp.html#ad9d9b85a0d58433bb367fa045ae09f51" title="Función ejecutada por el Hilo Lector (Reader Thread)." alt="" coords="103,5,216,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="248,34,216,29,217,24,249,29"/>
+<area shape="rect" id="Node000004" href="$main__cliente_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Hilo Principal (UI Thread)." alt="" coords="135,56,184,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="249,59,185,69,184,63,248,54"/>
+<area shape="rect" id="Node000003" href="$main__server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Hilo Principal (UI Thread)." alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,21,55,21,55,16,87,16"/>
+</map>

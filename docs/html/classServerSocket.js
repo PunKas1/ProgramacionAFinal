@@ -1,0 +1,27 @@
+var classServerSocket =
+[
+    [ "ServerSocket", "classServerSocket.html#a2b3098589541243241ca25495155186c", null ],
+    [ "~ServerSocket", "classServerSocket.html#a510674d924c2544e6b0069e39c36516b", null ],
+    [ "aceptarClientes", "classServerSocket.html#aa3909d8893c14aa0c1498312af89adc1", null ],
+    [ "bindear", "classServerSocket.html#a1a9dac66adae3be62dc422d16dd07fec", null ],
+    [ "cerrarCliente", "classServerSocket.html#adbaa6db4d33a8630023710499f126cb4", null ],
+    [ "cerrarServidor", "classServerSocket.html#a5c51707d83e73df462c3095c00f69d60", null ],
+    [ "configurar", "classServerSocket.html#ad5cac02fb407df331c377d7cfb2731be", null ],
+    [ "crear", "classServerSocket.html#aed4f954cffee07ff80d8ce540ba8cefb", null ],
+    [ "enviar", "classServerSocket.html#a83e5e2a03d21e3e383a3e67aa3e4a8fc", null ],
+    [ "escuchar", "classServerSocket.html#a9312853ed94ee2ff0a9bcc9b19fdaf08", null ],
+    [ "estoyAtendiendo", "classServerSocket.html#a45a66da337baf176de70f6a054bfa74d", null ],
+    [ "getClienteActual", "classServerSocket.html#a1cad4604560488599b66eebe8d590682", null ],
+    [ "hayClientesEnCola", "classServerSocket.html#a4659d477cc4d9140064cdaf33c57d3c4", null ],
+    [ "liberarClienteActual", "classServerSocket.html#a26559e98b94c989b0011a096d06a163b", null ],
+    [ "obtenerNombrePorSocket", "classServerSocket.html#aa2caeb9ab043b2f1f86dd7deeaefa28a", null ],
+    [ "recibir", "classServerSocket.html#a882e25aade6e7c1be34dca9c48340728", null ],
+    [ "tomarSiguienteCliente", "classServerSocket.html#a54e233b0852ed5cd338af48353f4868b", null ],
+    [ "clienteActual", "classServerSocket.html#a2183a4115ebb3e3bc13fa0f8c35c43f3", null ],
+    [ "colaClientes", "classServerSocket.html#af71f918ccba38573d9b3533fc07e28bb", null ],
+    [ "contadorID", "classServerSocket.html#a4772fc6ab28c449777b8811074ecd56c", null ],
+    [ "listaClientes", "classServerSocket.html#acdbcfe4963922584211482b08022c85b", null ],
+    [ "mtxCola", "classServerSocket.html#abefc51098ff2728273fd66cb9c479b5e", null ],
+    [ "serverAddr", "classServerSocket.html#a0c3362cb3371c5b521ec51e068ef408d", null ],
+    [ "serverSocket", "classServerSocket.html#a7dcc428768812210c5e00abbd68cd9cc", null ]
+];

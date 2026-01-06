@@ -1,0 +1,21 @@
+<map id="hiloRedServidor" name="hiloRedServidor">
+<area shape="rect" id="Node000001" title="Función ejecutada por el Hilo Lector (Reader Thread)." alt="" coords="5,199,119,225"/>
+<area shape="rect" id="Node000002" href="$classChat.html#af53cc83d7d1df84e1952443c6da2554e" title="Inserta un nuevo mensaje en el historial de forma segura." alt="" coords="195,5,344,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,197,78,165,98,123,127,79,165,42,179,34,182,38,168,46,131,82,103,126,82,167,70,199"/>
+<area shape="rect" id="Node000003" href="$classServerSocket.html#a45a66da337baf176de70f6a054bfa74d" title="Verifica si el agente está ocupado." alt="" coords="167,56,372,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="69,197,106,146,133,117,165,92,176,87,179,91,168,97,137,121,110,149,74,200"/>
+<area shape="rect" id="Node000004" href="$main__server_8cpp.html#ac826921c76f295155dbc1494a2e2ecef" title="Crea un archivo de tipo ticket (.txt) al finalizar la sesión." alt="" coords="219,107,320,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="79,196,118,169,166,143,203,130,205,135,168,148,121,174,82,200"/>
+<area shape="rect" id="Node000006" href="$classServerSocket.html#a1cad4604560488599b66eebe8d590682" title="Getter para obtener el ID del socket activo." alt="" coords="186,157,353,200"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="119,200,170,192,171,197,120,206"/>
+<area shape="rect" id="Node000007" href="$classServerSocket.html#a26559e98b94c989b0011a096d06a163b" title="Resetea el estado del agente a &quot;Libre&quot;." alt="" coords="177,224,362,267"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="120,218,162,225,162,231,119,224"/>
+<area shape="rect" id="Node000008" href="$classChat.html#a82a5db8e25c485af7ce2d2135a85583f" title="Obtiene una COPIA del historial actual para ser dibujada." alt="" coords="195,291,344,317"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="82,224,121,250,168,276,186,283,184,288,166,281,118,255,79,228"/>
+<area shape="rect" id="Node000009" href="$classServerSocket.html#aa2caeb9ab043b2f1f86dd7deeaefa28a" title="Busca en el vector listaClientes el nombre asociado a un socket." alt="" coords="171,341,368,384"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="74,224,111,274,138,303,168,327,176,332,173,336,165,332,134,307,107,278,70,227"/>
+<area shape="rect" id="Node000010" href="$classServerSocket.html#a882e25aade6e7c1be34dca9c48340728" title="Recibe datos del cliente que está siendo atendido ACTUALMENTE." alt="" coords="198,408,341,435"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="69,225,81,259,100,305,129,353,148,375,168,394,184,404,182,408,165,398,144,379,125,357,96,308,76,261,64,226"/>
+<area shape="rect" id="Node000005" href="$main__server_8cpp.html#a58eb3c831f0a4adc0138377666592749" title="Genera una marca de tiempo actual (Timestamp)." alt="" coords="420,107,549,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="320,117,404,117,404,123,320,123"/>
+</map>

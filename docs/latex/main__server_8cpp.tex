@@ -1,0 +1,186 @@
+\doxysection{src/main\+\_\+server.cpp File Reference}
+\hypertarget{main__server_8cpp}{}\label{main__server_8cpp}\index{src/main\_server.cpp@{src/main\_server.cpp}}
+
+
+Punto de entrada de la aplicación Servidor (Agente de Soporte).  
+
+
+{\ttfamily \#include "{}../include/socket.\+h"{}}\newline
+{\ttfamily \#include "{}../include/chat.\+h"{}}\newline
+{\ttfamily \#include $<$SFML/\+Graphics.\+hpp$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+Include dependency graph for main\+\_\+server.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main__server_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{main__server_8cpp_a58eb3c831f0a4adc0138377666592749}{obtener\+Timestamp}} ()
+\begin{DoxyCompactList}\small\item\em Genera una marca de tiempo actual (Timestamp). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main__server_8cpp_ac826921c76f295155dbc1494a2e2ecef}{generar\+Ticket}} (int id, std\+::string nombre, const std\+::vector$<$ \mbox{\hyperlink{structMensaje}{Mensaje}} $>$ \&historial)
+\begin{DoxyCompactList}\small\item\em Crea un archivo de tipo ticket (.txt) al finalizar la sesión. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main__server_8cpp_ad9d9b85a0d58433bb367fa045ae09f51}{hilo\+Red\+Servidor}} (\mbox{\hyperlink{classServerSocket}{Server\+Socket}} \texorpdfstring{$\ast$}{*}servidor, \mbox{\hyperlink{classChat}{Chat}} \texorpdfstring{$\ast$}{*}manager)
+\begin{DoxyCompactList}\small\item\em Función ejecutada por el Hilo Lector (Reader Thread). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main__server_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Hilo Principal (UI Thread). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Punto de entrada de la aplicación Servidor (Agente de Soporte). 
+
+\begin{DoxyAuthor}{Author}
+Valencia Cedeño Marcos Gael 
+
+Peralta Ordóñez Jesús 
+
+Esteves Flores Andrés 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06/01/2026
+\begin{DoxyItemize}
+\item Este archivo orquesta los tres componentes principales\+:
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item La Interfaz Gráfica (GUI) con SFML.
+\item La lógica de red en segundo plano (Hilos).
+\item La gestión de archivos para generar los Tickets de reporte. 
+\end{DoxyEnumerate}
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{main__server_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main__server_8cpp_ac826921c76f295155dbc1494a2e2ecef}\index{main\_server.cpp@{main\_server.cpp}!generarTicket@{generarTicket}}
+\index{generarTicket@{generarTicket}!main\_server.cpp@{main\_server.cpp}}
+\doxysubsubsection{\texorpdfstring{generarTicket()}{generarTicket()}}
+{\footnotesize\ttfamily \label{main__server_8cpp_ac826921c76f295155dbc1494a2e2ecef} 
+void generar\+Ticket (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{std\+::string}]{nombre}{, }\item[{const std\+::vector$<$ \mbox{\hyperlink{structMensaje}{Mensaje}} $>$ \&}]{historial}{}\end{DoxyParamCaption})}
+
+
+
+Crea un archivo de tipo ticket (.txt) al finalizar la sesión. 
+
+
+\begin{DoxyItemize}
+\item Esta función garantiza la PERSISTENCIA de los datos. Si el programa se cierra, la conversación queda guardada en disco. 
+\begin{DoxyParams}{Parameters}
+{\em id} & ID numérico del cliente. \\
+\hline
+{\em nombre} & Nombre legible (ej. "{}\+Cliente 5"{}). \\
+\hline
+{\em historial} & Vector con todos los mensajes de la sesión. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{main__server_8cpp_ac826921c76f295155dbc1494a2e2ecef_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{main__server_8cpp_ac826921c76f295155dbc1494a2e2ecef_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main__server_8cpp_ad9d9b85a0d58433bb367fa045ae09f51}\index{main\_server.cpp@{main\_server.cpp}!hiloRedServidor@{hiloRedServidor}}
+\index{hiloRedServidor@{hiloRedServidor}!main\_server.cpp@{main\_server.cpp}}
+\doxysubsubsection{\texorpdfstring{hiloRedServidor()}{hiloRedServidor()}}
+{\footnotesize\ttfamily \label{main__server_8cpp_ad9d9b85a0d58433bb367fa045ae09f51} 
+void hilo\+Red\+Servidor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classServerSocket}{Server\+Socket}} \texorpdfstring{$\ast$}{*}}]{servidor}{, }\item[{\mbox{\hyperlink{classChat}{Chat}} \texorpdfstring{$\ast$}{*}}]{manager}{}\end{DoxyParamCaption})}
+
+
+
+Función ejecutada por el Hilo Lector (Reader Thread). 
+
+
+\begin{DoxyItemize}
+\item Se mantiene en un bucle infinito escuchando al cliente ACTIVO.
+\item Detecta desconexiones y dispara la generación automática del ticket. 
+\begin{DoxyParams}{Parameters}
+{\em servidor} & Puntero a la instancia del socket (para recibir datos). \\
+\hline
+{\em manager} & Puntero al gestor del chat (para guardar mensajes). \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main__server_8cpp_ad9d9b85a0d58433bb367fa045ae09f51_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{main__server_8cpp_ad9d9b85a0d58433bb367fa045ae09f51_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main__server_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main\_server.cpp@{main\_server.cpp}!main@{main}}
+\index{main@{main}!main\_server.cpp@{main\_server.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main__server_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Hilo Principal (UI Thread). 
+
+
+\begin{DoxyItemize}
+\item Maneja la ventana de SFML, los eventos de entrada (teclado/mouse) y la lógica de asignación de turnos ("{}\+El Portero"{}). 
+\end{DoxyItemize}Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main__server_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main__server_8cpp_a58eb3c831f0a4adc0138377666592749}\index{main\_server.cpp@{main\_server.cpp}!obtenerTimestamp@{obtenerTimestamp}}
+\index{obtenerTimestamp@{obtenerTimestamp}!main\_server.cpp@{main\_server.cpp}}
+\doxysubsubsection{\texorpdfstring{obtenerTimestamp()}{obtenerTimestamp()}}
+{\footnotesize\ttfamily \label{main__server_8cpp_a58eb3c831f0a4adc0138377666592749} 
+std\+::string obtener\+Timestamp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Genera una marca de tiempo actual (Timestamp). 
+
+\begin{DoxyReturn}{Returns}
+std\+::string Fecha y hora en formato "{}\+YYYY-\/\+MM-\/\+DD HH\+:\+MM\+:\+SS"{}. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main__server_8cpp_a58eb3c831f0a4adc0138377666592749_icgraph}
+\end{center}
+\end{figure}

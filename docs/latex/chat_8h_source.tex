@@ -1,0 +1,42 @@
+\doxysection{chat.\+h}
+\hypertarget{chat_8h_source}{}\label{chat_8h_source}\index{include/chat.h@{include/chat.h}}
+\mbox{\hyperlink{chat_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ CHAT\_H}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ CHAT\_H}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <mutex>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structMensaje}{Mensaje}}\{}
+\DoxyCodeLine{00027\ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ std::string\ \mbox{\hyperlink{structMensaje_a0ec702d03bfa8031f770c3e804895a8a}{emisor}};\ }
+\DoxyCodeLine{00029\ \ \ \ \ std::string\ \mbox{\hyperlink{structMensaje_a603a1ad791f7dffb5824c0caeecd1618}{texto}};\ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structMensaje_ad7de259f977616ea3a9396e961853b69}{esMio}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classChat_a4427e061b727c06cccca9626cc0cf9c8}{Chat}}\{}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ std::vector<Mensaje>\ \mbox{\hyperlink{classChat_a8541315a79c38ef3764be4dd786b3bcf}{historial}};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ std::mutex\ \mbox{\hyperlink{classChat_ac098b99381f685fe4907ccaef94c9e92}{mtx}};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classChat_a4427e061b727c06cccca9626cc0cf9c8}{Chat}}()\{\};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChat_af53cc83d7d1df84e1952443c6da2554e}{agregarMensaje}}(std::string\ emisor,\ std::string\ texto,\ \textcolor{keywordtype}{bool}\ esMio);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ std::vector<Mensaje>\ \mbox{\hyperlink{classChat_a82a5db8e25c485af7ce2d2135a85583f}{obtenerHistorial}}();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChat_a79939f88cfd296f84e43078975f7c134}{limpiarHistorial}}();}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

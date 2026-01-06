@@ -1,0 +1,5 @@
+<map id="ServerSocket::cerrarServidor" name="ServerSocket::cerrarServidor">
+<area shape="rect" id="Node000001" title="Apaga todo el servidor." alt="" coords="5,5,195,32"/>
+<area shape="rect" id="Node000002" href="$classServerSocket.html#adbaa6db4d33a8630023710499f126cb4" title="Cierra la conexión con un cliente específico." alt="" coords="243,5,425,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,16,227,16,227,21,195,21"/>
+</map>

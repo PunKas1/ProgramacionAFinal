@@ -1,0 +1,7 @@
+<map id="include/clienteSocket.h" name="include/clienteSocket.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="85,5,241,32"/>
+<area shape="rect" id="Node000002" href="$clienteSocket_8cpp.html" title="Implementación de la comunicación de red lado Cliente." alt="" coords="5,80,153,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,45,95,82,92,78,135,40"/>
+<area shape="rect" id="Node000003" href="$main__cliente_8cpp.html" title="Punto de entrada de la aplicación Cliente (Usuario)." alt="" coords="176,80,318,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,40,234,78,231,82,188,45"/>
+</map>

@@ -1,0 +1,208 @@
+\begin{theindex}
+
+  \item {\texorpdfstring{$\sim$}{\string~}ClienteSocket}
+    \subitem {ClienteSocket}, \hyperpage{10}
+  \item {\texorpdfstring{$\sim$}{\string~}ServerSocket}
+    \subitem {ServerSocket}, \hyperpage{20}
+
+  \indexspace
+
+  \item {aceptarClientes}
+    \subitem {ServerSocket}, \hyperpage{21}
+  \item {agregarMensaje}
+    \subitem {Chat}, \hyperpage{6}
+
+  \indexspace
+
+  \item {bindear}
+    \subitem {ServerSocket}, \hyperpage{21}
+
+  \indexspace
+
+  \item {cerrar}
+    \subitem {ClienteSocket}, \hyperpage{11}
+  \item {cerrarCliente}
+    \subitem {ServerSocket}, \hyperpage{21}
+  \item {cerrarServidor}
+    \subitem {ServerSocket}, \hyperpage{22}
+  \item {Chat}, \hyperpage{5}
+    \subitem {agregarMensaje}, \hyperpage{6}
+    \subitem {Chat}, \hyperpage{6}
+    \subitem {historial}, \hyperpage{8}
+    \subitem {limpiarHistorial}, \hyperpage{7}
+    \subitem {mtx}, \hyperpage{8}
+    \subitem {obtenerHistorial}, \hyperpage{7}
+  \item {clienteActual}
+    \subitem {ServerSocket}, \hyperpage{28}
+  \item {ClienteSocket}, \hyperpage{9}
+    \subitem {\texorpdfstring{$\sim$}{\string~}ClienteSocket}, 
+		\hyperpage{10}
+    \subitem {cerrar}, \hyperpage{11}
+    \subitem {ClienteSocket}, \hyperpage{10}
+    \subitem {clienteSocket}, \hyperpage{15}
+    \subitem {conectar}, \hyperpage{11}
+    \subitem {crear}, \hyperpage{13}
+    \subitem {enviar}, \hyperpage{13}
+    \subitem {recibir}, \hyperpage{14}
+    \subitem {serverAddr}, \hyperpage{15}
+  \item {clienteSocket}
+    \subitem {ClienteSocket}, \hyperpage{15}
+  \item {colaClientes}
+    \subitem {ServerSocket}, \hyperpage{28}
+  \item {conectar}
+    \subitem {ClienteSocket}, \hyperpage{11}
+  \item {configurar}
+    \subitem {ServerSocket}, \hyperpage{22}
+  \item {contadorID}
+    \subitem {ServerSocket}, \hyperpage{29}
+  \item {crear}
+    \subitem {ClienteSocket}, \hyperpage{13}
+    \subitem {ServerSocket}, \hyperpage{23}
+
+  \indexspace
+
+  \item {emisor}
+    \subitem {Mensaje}, \hyperpage{17}
+  \item {enEspera}
+    \subitem {main\_cliente.cpp}, \hyperpage{38}
+  \item {enviar}
+    \subitem {ClienteSocket}, \hyperpage{13}
+    \subitem {ServerSocket}, \hyperpage{23}
+  \item {escuchar}
+    \subitem {ServerSocket}, \hyperpage{24}
+  \item {esMio}
+    \subitem {Mensaje}, \hyperpage{17}
+  \item {estoyAtendiendo}
+    \subitem {ServerSocket}, \hyperpage{24}
+
+  \indexspace
+
+  \item {generarTicket}
+    \subitem {main\_server.cpp}, \hyperpage{41}
+  \item {getClienteActual}
+    \subitem {ServerSocket}, \hyperpage{25}
+
+  \indexspace
+
+  \item {hayClientesEnCola}
+    \subitem {ServerSocket}, \hyperpage{25}
+  \item {hiloRedCliente}
+    \subitem {main\_cliente.cpp}, \hyperpage{38}
+  \item {hiloRedServidor}
+    \subitem {main\_server.cpp}, \hyperpage{42}
+  \item {historial}
+    \subitem {Chat}, \hyperpage{8}
+
+  \indexspace
+
+  \item {id}
+    \subitem {InfoCliente}, \hyperpage{16}
+  \item {include/chat.h}, \hyperpage{31, 32}
+  \item {include/clienteSocket.h}, \hyperpage{32, 33}
+  \item {include/socket.h}, \hyperpage{33, 34}
+  \item {InfoCliente}, \hyperpage{15}
+    \subitem {id}, \hyperpage{16}
+    \subitem {nombre}, \hyperpage{16}
+    \subitem {socket}, \hyperpage{16}
+
+  \indexspace
+
+  \item {liberarClienteActual}
+    \subitem {ServerSocket}, \hyperpage{26}
+  \item {limpiarHistorial}
+    \subitem {Chat}, \hyperpage{7}
+  \item {listaClientes}
+    \subitem {ServerSocket}, \hyperpage{29}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main\_cliente.cpp}, \hyperpage{39}
+    \subitem {main\_server.cpp}, \hyperpage{43}
+  \item {main\_cliente.cpp}
+    \subitem {enEspera}, \hyperpage{38}
+    \subitem {hiloRedCliente}, \hyperpage{38}
+    \subitem {main}, \hyperpage{39}
+  \item {main\_server.cpp}
+    \subitem {generarTicket}, \hyperpage{41}
+    \subitem {hiloRedServidor}, \hyperpage{42}
+    \subitem {main}, \hyperpage{43}
+    \subitem {obtenerTimestamp}, \hyperpage{44}
+  \item {Mensaje}, \hyperpage{17}
+    \subitem {emisor}, \hyperpage{17}
+    \subitem {esMio}, \hyperpage{17}
+    \subitem {texto}, \hyperpage{18}
+  \item {mtx}
+    \subitem {Chat}, \hyperpage{8}
+  \item {mtxCola}
+    \subitem {ServerSocket}, \hyperpage{29}
+
+  \indexspace
+
+  \item {nombre}
+    \subitem {InfoCliente}, \hyperpage{16}
+
+  \indexspace
+
+  \item {obtenerHistorial}
+    \subitem {Chat}, \hyperpage{7}
+  \item {obtenerNombrePorSocket}
+    \subitem {ServerSocket}, \hyperpage{26}
+  \item {obtenerTimestamp}
+    \subitem {main\_server.cpp}, \hyperpage{44}
+
+  \indexspace
+
+  \item {recibir}
+    \subitem {ClienteSocket}, \hyperpage{14}
+    \subitem {ServerSocket}, \hyperpage{27}
+
+  \indexspace
+
+  \item {serverAddr}
+    \subitem {ClienteSocket}, \hyperpage{15}
+    \subitem {ServerSocket}, \hyperpage{29}
+  \item {ServerSocket}, \hyperpage{18}
+    \subitem {\texorpdfstring{$\sim$}{\string~}ServerSocket}, 
+		\hyperpage{20}
+    \subitem {aceptarClientes}, \hyperpage{21}
+    \subitem {bindear}, \hyperpage{21}
+    \subitem {cerrarCliente}, \hyperpage{21}
+    \subitem {cerrarServidor}, \hyperpage{22}
+    \subitem {clienteActual}, \hyperpage{28}
+    \subitem {colaClientes}, \hyperpage{28}
+    \subitem {configurar}, \hyperpage{22}
+    \subitem {contadorID}, \hyperpage{29}
+    \subitem {crear}, \hyperpage{23}
+    \subitem {enviar}, \hyperpage{23}
+    \subitem {escuchar}, \hyperpage{24}
+    \subitem {estoyAtendiendo}, \hyperpage{24}
+    \subitem {getClienteActual}, \hyperpage{25}
+    \subitem {hayClientesEnCola}, \hyperpage{25}
+    \subitem {liberarClienteActual}, \hyperpage{26}
+    \subitem {listaClientes}, \hyperpage{29}
+    \subitem {mtxCola}, \hyperpage{29}
+    \subitem {obtenerNombrePorSocket}, \hyperpage{26}
+    \subitem {recibir}, \hyperpage{27}
+    \subitem {serverAddr}, \hyperpage{29}
+    \subitem {ServerSocket}, \hyperpage{20}
+    \subitem {serverSocket}, \hyperpage{29}
+    \subitem {tomarSiguienteCliente}, \hyperpage{27}
+  \item {serverSocket}
+    \subitem {ServerSocket}, \hyperpage{29}
+  \item {socket}
+    \subitem {InfoCliente}, \hyperpage{16}
+  \item {src/chat.cpp}, \hyperpage{36}
+  \item {src/clienteSocket.cpp}, \hyperpage{36}
+  \item {src/main\_cliente.cpp}, \hyperpage{37}
+  \item {src/main\_server.cpp}, \hyperpage{40}
+  \item {src/socket.cpp}, \hyperpage{45}
+
+  \indexspace
+
+  \item {texto}
+    \subitem {Mensaje}, \hyperpage{18}
+  \item {tomarSiguienteCliente}
+    \subitem {ServerSocket}, \hyperpage{27}
+
+\end{theindex}

@@ -1,0 +1,5 @@
+<map id="generarTicket" name="generarTicket">
+<area shape="rect" id="Node000001" title="Crea un archivo de tipo ticket (.txt) al finalizar la sesión." alt="" coords="5,5,106,32"/>
+<area shape="rect" id="Node000002" href="$main__server_8cpp.html#a58eb3c831f0a4adc0138377666592749" title="Genera una marca de tiempo actual (Timestamp)." alt="" coords="154,5,283,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,16,138,16,138,21,106,21"/>
+</map>

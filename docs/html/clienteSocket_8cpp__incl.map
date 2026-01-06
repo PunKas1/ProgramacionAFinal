@@ -1,0 +1,17 @@
+<map id="src/clienteSocket.cpp" name="src/clienteSocket.cpp">
+<area shape="rect" id="Node000001" title="Implementación de la comunicación de red lado Cliente." alt="" coords="258,5,406,32"/>
+<area shape="rect" id="Node000002" href="$clienteSocket_8h.html" title=" " alt="" coords="10,80,179,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="291,35,152,78,150,72,290,30"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="203,80,274,107"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="317,35,268,73,265,68,314,30"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="298,80,366,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="335,33,335,64,329,64,329,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="390,80,472,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="351,30,403,69,400,73,348,35"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="496,80,557,107"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="367,30,483,73,481,78,365,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,91,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="89,109,66,143,62,140,84,106"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="115,155,168,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="105,106,127,140,123,143,101,109"/>
+</map>

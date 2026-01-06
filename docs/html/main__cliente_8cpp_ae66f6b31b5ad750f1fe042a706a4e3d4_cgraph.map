@@ -1,0 +1,21 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title="Hilo Principal (UI Thread)." alt="" coords="5,142,55,168"/>
+<area shape="rect" id="Node000002" href="$classChat.html#af53cc83d7d1df84e1952443c6da2554e" title="Inserta un nuevo mensaje en el historial de forma segura." alt="" coords="312,40,461,67"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="32,140,39,115,53,83,73,51,101,26,131,13,162,5,195,3,227,4,289,15,341,32,339,37,288,21,227,10,195,8,163,11,133,18,104,31,77,54,57,85,44,116,37,142"/>
+<area shape="rect" id="Node000003" href="$classClienteSocket.html#a13ae48df54e6f284951e57fcebf55069" title="Intenta establecer el &quot;Túnel&quot; (TCP) con el servidor." alt="" coords="103,40,264,67"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="39,140,65,108,101,77,111,71,113,76,104,81,68,112,43,143"/>
+<area shape="rect" id="Node000004" href="$classClienteSocket.html#ad217d24fed0bd7eeb015fc7d990da5d1" title="Solicita al Sistema Operativo la creación de un endpoint de comunicación." alt="" coords="113,91,254,118"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="54,144,102,127,122,120,124,125,104,132,56,149"/>
+<area shape="rect" id="Node000005" href="$main__cliente_8cpp.html#aac648d18ad9d8ac1b8a0e1c984adae6c" title="Bandera de estado compartida entre hilos (Thread&#45;Safe)." alt="" coords="348,218,425,244"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="41,167,66,200,84,216,104,229,163,246,224,251,283,248,333,240,334,246,283,253,224,256,162,251,102,233,80,221,62,204,37,171"/>
+<area shape="rect" id="Node000006" href="$classClienteSocket.html#a05d91ad7f4dc849feb1b3ed814287d64" title="Envía datos a través del túnel." alt="" coords="110,192,256,219"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="56,161,104,178,124,185,122,190,102,183,54,166"/>
+<area shape="rect" id="Node000007" href="$main__cliente_8cpp.html#a1f5ab905765ecc5efc5dc01d8f63421e" title="Función del Hilo Secundario: Escucha al servidor." alt="" coords="130,142,236,168"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="55,152,114,152,114,158,55,158"/>
+<area shape="rect" id="Node000009" href="$classChat.html#a82a5db8e25c485af7ce2d2135a85583f" title="Obtiene una COPIA del historial actual para ser dibujada." alt="" coords="109,294,258,320"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="39,168,62,219,81,248,104,273,121,284,118,289,101,277,77,251,57,221,34,170"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="234,139,263,127,311,101,353,74,355,79,314,106,265,132,236,144"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="231,166,265,178,341,209,339,214,263,183,230,172"/>
+<area shape="rect" id="Node000008" href="$classClienteSocket.html#a343c2d9d87d3d7d16bf8c45c92c92590" title="Espera y captura datos provenientes del servidor." alt="" coords="314,142,460,168"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="237,152,298,152,298,158,237,158"/>
+</map>

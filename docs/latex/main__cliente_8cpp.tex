@@ -1,0 +1,132 @@
+\doxysection{src/main\+\_\+cliente.cpp File Reference}
+\hypertarget{main__cliente_8cpp}{}\label{main__cliente_8cpp}\index{src/main\_cliente.cpp@{src/main\_cliente.cpp}}
+
+
+Punto de entrada de la aplicación Cliente (Usuario).  
+
+
+{\ttfamily \#include "{}../include/cliente\+Socket.\+h"{}}\newline
+{\ttfamily \#include "{}../include/chat.\+h"{}}\newline
+{\ttfamily \#include $<$SFML/\+Graphics.\+hpp$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+Include dependency graph for main\+\_\+cliente.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main__cliente_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{main__cliente_8cpp_aac648d18ad9d8ac1b8a0e1c984adae6c}{en\+Espera}} (true)
+\begin{DoxyCompactList}\small\item\em Bandera de estado compartida entre hilos (Thread-\/\+Safe). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main__cliente_8cpp_a1f5ab905765ecc5efc5dc01d8f63421e}{hilo\+Red\+Cliente}} (\mbox{\hyperlink{classClienteSocket}{Cliente\+Socket}} \texorpdfstring{$\ast$}{*}cliente, \mbox{\hyperlink{classChat}{Chat}} \texorpdfstring{$\ast$}{*}manager)
+\begin{DoxyCompactList}\small\item\em Función del Hilo Secundario\+: Escucha al servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main__cliente_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Hilo Principal (UI Thread). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Punto de entrada de la aplicación Cliente (Usuario). 
+
+\begin{DoxyAuthor}{Author}
+Valencia Cedeño Marcos Gael 
+
+Peralta Ordóñez Jesús 
+
+Esteves Flores Andrés 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06/01/2026
+\begin{DoxyItemize}
+\item Este archivo maneja la Interfaz Gráfica (SFML) para el usuario final.
+\item Implementa el protocolo de comunicación (/\+WAIT, /\+START) para bloquear o desbloquear la interacción según la disponibilidad del agente. 
+\end{DoxyItemize}
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{main__cliente_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main__cliente_8cpp_aac648d18ad9d8ac1b8a0e1c984adae6c}\index{main\_cliente.cpp@{main\_cliente.cpp}!enEspera@{enEspera}}
+\index{enEspera@{enEspera}!main\_cliente.cpp@{main\_cliente.cpp}}
+\doxysubsubsection{\texorpdfstring{enEspera()}{enEspera()}}
+{\footnotesize\ttfamily \label{main__cliente_8cpp_aac648d18ad9d8ac1b8a0e1c984adae6c} 
+std\+::atomic$<$ bool $>$ en\+Espera (\begin{DoxyParamCaption}\item[{true}]{}{}\end{DoxyParamCaption})}
+
+
+
+Bandera de estado compartida entre hilos (Thread-\/\+Safe). 
+
+
+\begin{DoxyItemize}
+\item Se usa std\+::atomic$<$bool$>$ en lugar de un bool normal para evitar "{}\+Condiciones de Carrera"{}.
+\item True\+: El cliente está en la cola de espera (Pantalla Bloqueada).
+\item False\+: El cliente está siendo atendido (Pantalla Libre). 
+\end{DoxyItemize}Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{main__cliente_8cpp_aac648d18ad9d8ac1b8a0e1c984adae6c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main__cliente_8cpp_a1f5ab905765ecc5efc5dc01d8f63421e}\index{main\_cliente.cpp@{main\_cliente.cpp}!hiloRedCliente@{hiloRedCliente}}
+\index{hiloRedCliente@{hiloRedCliente}!main\_cliente.cpp@{main\_cliente.cpp}}
+\doxysubsubsection{\texorpdfstring{hiloRedCliente()}{hiloRedCliente()}}
+{\footnotesize\ttfamily \label{main__cliente_8cpp_a1f5ab905765ecc5efc5dc01d8f63421e} 
+void hilo\+Red\+Cliente (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classClienteSocket}{Cliente\+Socket}} \texorpdfstring{$\ast$}{*}}]{cliente}{, }\item[{\mbox{\hyperlink{classChat}{Chat}} \texorpdfstring{$\ast$}{*}}]{manager}{}\end{DoxyParamCaption})}
+
+
+
+Función del Hilo Secundario\+: Escucha al servidor. 
+
+
+\begin{DoxyItemize}
+\item Se encarga de recibir mensajes y decidir si son TEXTO para el chat o COMANDOS para cambiar el estado de la aplicación. 
+\end{DoxyItemize}Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{main__cliente_8cpp_a1f5ab905765ecc5efc5dc01d8f63421e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{main__cliente_8cpp_a1f5ab905765ecc5efc5dc01d8f63421e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main__cliente_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main\_cliente.cpp@{main\_cliente.cpp}!main@{main}}
+\index{main@{main}!main\_cliente.cpp@{main\_cliente.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main__cliente_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Hilo Principal (UI Thread). 
+
+
+\begin{DoxyItemize}
+\item Dibuja la ventana, maneja el input del usuario y renderiza el overlay de bloqueo. 
+\end{DoxyItemize}Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main__cliente_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}

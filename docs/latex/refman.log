@@ -1,0 +1,1543 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2026.1.6)  6 JAN 2026 08:36
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**refman
+(./refman.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22>
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@chapter=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Rollback for package 'array' requested -> date 2016-10-06.
+         Best approximation is the release introduced on 2016-10-06.
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array-2016-10-06.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen141
+\extrarowheight=\dimen142
+\NC@list=\toks16
+\extratabsurround=\skip50
+\backup@length=\skip51
+))
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+package info suppressed
+)
+(./doxygen.sty
+Package: doxygen 
+ (/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 2021/01/29 v2.0g defines alltt environment
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count194
+\calc@Bcount=\count195
+\calc@Adimen=\dimen143
+\calc@Bdimen=\dimen144
+\calc@Askip=\skip52
+\calc@Bskip=\skip53
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count196
+\calc@Cskip=\skip54
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count197
+\float@exts=\toks17
+\float@box=\box51
+\@float@everytoks=\toks18
+\@floatcapt=\box52
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks19
+\verbatim@line=\toks20
+\verbatim@in@stream=\read2
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
+\everycr=\toks21
+\minrowclearance=\skip55
+\rownum=\count198
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)
+(./longtable_doxygen.sty
+Package: longtable_doxygen 2014/10/28 v4.11 Multi-page Table package (DPC) - fr
+ozen version for doxygen
+\LTleft=\skip56
+\LTright=\skip57
+\LTpre=\skip58
+\LTpost=\skip59
+\LTchunksize=\count199
+\LTcapwidth=\dimen145
+\LT@head=\box53
+\LT@firsthead=\box54
+\LT@foot=\box55
+\LT@lastfoot=\box56
+\LT@cols=\count266
+\LT@rows=\count267
+\c@LT@tables=\count268
+\c@LT@chunks=\count269
+\LT@p@ftn=\toks22
+) (./tabu_doxygen.sty
+Package: tabu_doxygen 2011/02/26 v2.8 - flexible LaTeX tabulars (FC), frozen ve
+rsion for doxygen
+
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box57
+\sift@deathcycles=\count270
+\@vwid@loff=\dimen146
+\@vwid@roff=\dimen147
+)
+\c@taburow=\count271
+\tabu@nbcols=\count272
+\tabu@cnt=\count273
+\tabu@Xcol=\count274
+\tabu@alloc=\count275
+\tabu@nested=\count276
+\tabu@target=\dimen148
+\tabu@spreadtarget=\dimen149
+\tabu@naturalX=\dimen150
+\tabucolX=\dimen151
+\tabu@Xsum=\dimen152
+\extrarowdepth=\dimen153
+\abovetabulinesep=\dimen154
+\belowtabulinesep=\dimen155
+\tabustrutrule=\dimen156
+\tabu@thebody=\toks23
+\tabu@footnotes=\toks24
+\tabu@box=\box58
+\tabu@arstrutbox=\box59
+\tabu@hleads=\box60
+\tabu@vleads=\box61
+\tabu@cellskip=\skip60
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2023/01/19 4.5a verbatim text (tvz,hv)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks25
+)
+\FV@CodeLineNo=\count277
+\FV@InFile=\read3
+\FV@TabBox=\box62
+\c@FancyVerbLine=\count278
+\FV@StepNumber=\count279
+\FV@OutFile=\write3
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen157
+\TX@old@table=\dimen158
+\TX@old@col=\dimen159
+\TX@target=\dimen160
+\TX@delta=\dimen161
+\TX@cols=\count280
+\TX@ftn=\toks26
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
+\c@tracingmulticols=\count281
+\mult@box=\box63
+\multicol@leftmargin=\dimen162
+\c@unbalance=\count282
+\c@collectmore=\count283
+\doublecol@number=\count284
+\multicoltolerance=\count285
+\multicolpretolerance=\count286
+\full@width=\dimen163
+\page@free=\dimen164
+\premulticols=\dimen165
+\postmulticols=\dimen166
+\multicolsep=\skip61
+\multicolbaselineskip=\skip62
+\partial@page=\box64
+\last@line=\box65
+\maxbalancingoverflow=\dimen167
+\mult@rightbox=\box66
+\mult@grightbox=\box67
+\mult@firstbox=\box68
+\mult@gfirstbox=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\c@minrows=\count287
+\c@columnbadness=\count288
+\c@finalcolumnbadness=\count289
+\last@try=\dimen168
+\multicolovershoot=\dimen169
+\multicolundershoot=\dimen170
+\mult@nat@firstbox=\box106
+\colbreak@box=\box107
+\mc@col@check@num=\count290
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip63
+\multirow@cntb=\count291
+\multirow@dima=\skip64
+\bigstrutjot=\dimen171
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hanging/hanging.sty
+Package: hanging 2009/09/02 v1.2b hanging paragraphs and punctuation
+\h@ngcommawd=\skip65
+\h@ngfstopwd=\skip66
+\h@ngquotewd=\skip67
+\h@ngdquotewd=\skip68
+\h@ngquerywd=\skip69
+\h@ngexclwd=\skip70
+\h@ngcolonwd=\skip71
+\h@ngscolonwd=\skip72
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks27
+\XKV@tempa@toks=\toks28
+)
+\XKV@depth=\count292
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen172
+\Gin@req@width=\dimen173
+)
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box108
+)
+\tc@llx=\dimen174
+\tc@lly=\dimen175
+\tc@urx=\dimen176
+\tc@ury=\dimen177
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen178
+\adjbox@Height=\dimen179
+\adjbox@Depth=\dimen180
+\adjbox@Totalheight=\dimen181
+\adjbox@pwidth=\dimen182
+\adjbox@pheight=\dimen183
+\adjbox@pdepth=\dimen184
+\adjbox@ptotalheight=\dimen185
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count293
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks29
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/stackengine/stackengine.sty
+Package: stackengine 2021/07/22 v4.11\ Stacking text and objects in convenient 
+ways
+
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count294
+)
+(/usr/share/texlive/texmf-dist/tex/generic/listofitems/listofitems.sty
+(/usr/share/texlive/texmf-dist/tex/generic/listofitems/listofitems.tex
+\loi_cnt_foreach_nest=\count295
+\loi_nestcnt=\count296
+)
+Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified 
+sep char (CT)
+)
+\c@@stackindex=\count297
+\@boxshift=\skip73
+\stack@tmplength=\skip74
+\temp@stkl=\skip75
+\@stackedboxwidth=\skip76
+\@addedbox=\box109
+\@anchorbox=\box110
+\@insetbox=\box111
+\se@backgroundbox=\box112
+\stackedbox=\box113
+\@centerbox=\box114
+\c@ROWcellindex@=\count298
+)
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip77
+\enit@outerparindent=\dimen186
+\enit@toks=\toks30
+\enit@inbox=\box115
+\enit@count@id=\count299
+\enitdp@description=\count300
+)
+(/usr/share/texlive/texmf-dist/tex/generic/alphalph/alphalph.sty
+Package: alphalph 2019/12/09 v2.6 Convert numbers to letters (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box116
+\UL@hyphenbox=\box117
+\UL@skip=\skip78
+\UL@hook=\toks31
+\UL@height=\dimen187
+\UL@pe=\count301
+\UL@pixel=\dimen188
+\ULC@box=\box118
+Package: ulem 2019/11/18
+\ULdepth=\dimen189
+)
+\xrefbox=\box119
+\xreflength=\skip79
+\CodeWidthChar=\skip80
+\CodeHeightChar=\skip81
+\DoxyCodeWidth=\skip82
+\c@DoxyEnumeratei=\count302
+\c@DoxyEnumerateii=\count303
+\c@DoxyEnumerateiii=\count304
+\c@DoxyEnumerateiv=\count305
+\c@DoxyEnumeratev=\count306
+\c@DoxyEnumeratevi=\count307
+\c@DoxyEnumeratevii=\count308
+\c@DoxyEnumerateviii=\count309
+\c@DoxyEnumerateix=\count310
+\c@DoxyEnumeratex=\count311
+\c@DoxyEnumeratexi=\count312
+\c@DoxyEnumeratexii=\count313
+\enitdp@DoxyEnumerate=\count314
+\enitdp@DoxyItemize=\count315
+\c@subsubsubsection=\count316
+\c@subsubsubsubsection=\count317
+\c@subsubsubsubsubsection=\count318
+\c@subsubsubsubsubsubsection=\count319
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks32
+\inpenc@posthook=\toks33
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/wasysym/wasysym.sty
+Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
+\symwasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/helvet.sty
+Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/courier.sty
+Package: courier 2020/03/25 PSNFSS-v9.3 (WaS) 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count320
+\Gm@cntv=\count321
+\c@Gm@tempcnt=\count322
+\Gm@bindingoffset=\dimen190
+\Gm@wd@mp=\dimen191
+\Gm@odd@mp=\dimen192
+\Gm@even@mp=\dimen193
+\Gm@layoutwidth=\dimen194
+\Gm@layoutheight=\dimen195
+\Gm@layouthoffset=\dimen196
+\Gm@layoutvoffset=\dimen197
+\Gm@dimlist=\toks34
+)
+(/usr/share/texlive/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count323
+\cp@tempcnt=\count324
+LaTeX Info: Redefining \checkoddpage on input line 59.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip83
+\f@nch@O@elh=\skip84
+\f@nch@O@erh=\skip85
+\f@nch@O@olh=\skip86
+\f@nch@O@orh=\skip87
+\f@nch@O@elf=\skip88
+\f@nch@O@erf=\skip89
+\f@nch@O@olf=\skip90
+\f@nch@O@orf=\skip91
+)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip92
+\bibsep=\skip93
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count325
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
+\cftparskip=\skip94
+\cftbeforetoctitleskip=\skip95
+\cftaftertoctitleskip=\skip96
+\cftbeforepartskip=\skip97
+\cftpartnumwidth=\skip98
+\cftpartindent=\skip99
+\cftbeforechapskip=\skip100
+\cftchapindent=\skip101
+\cftchapnumwidth=\skip102
+\cftbeforesecskip=\skip103
+\cftsecindent=\skip104
+\cftsecnumwidth=\skip105
+\cftbeforesubsecskip=\skip106
+\cftsubsecindent=\skip107
+\cftsubsecnumwidth=\skip108
+\cftbeforesubsubsecskip=\skip109
+\cftsubsubsecindent=\skip110
+\cftsubsubsecnumwidth=\skip111
+\cftbeforeparaskip=\skip112
+\cftparaindent=\skip113
+\cftparanumwidth=\skip114
+\cftbeforesubparaskip=\skip115
+\cftsubparaindent=\skip116
+\cftsubparanumwidth=\skip117
+\cftbeforeloftitleskip=\skip118
+\cftafterloftitleskip=\skip119
+\cftbeforefigskip=\skip120
+\cftfigindent=\skip121
+\cftfignumwidth=\skip122
+\c@lofdepth=\count326
+\c@lotdepth=\count327
+\cftbeforelottitleskip=\skip123
+\cftafterlottitleskip=\skip124
+\cftbeforetabskip=\skip125
+\cfttabindent=\skip126
+\cfttabnumwidth=\skip127
+)
+\@indexfile=\write4
+\openout4 = `refman.idx'.
+
+
+Writing index file refman.idx
+(/usr/share/texlive/texmf-dist/tex/latex/newunicodechar/newunicodechar.sty
+Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count328
+)
+\@linkdim=\dimen198
+\Hy@linkcounter=\count329
+\Hy@pagecounter=\count330
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count331
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4177.
+Package hyperref Info: Link nesting OFF on input line 4182.
+Package hyperref Info: Hyper index ON on input line 4185.
+Package hyperref Info: Plain pages OFF on input line 4192.
+Package hyperref Info: Backreferencing ON on input line 4195.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4425.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/backref.sty
+Package: backref 2021/02/04 v1.41 Bibliographical back referencing
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+))
+\c@Hy@tempcnt=\count332
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen199
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+)
+\Fld@menulength=\count333
+\Field@Width=\dimen256
+\Fld@charsize=\dimen257
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing ON on input line 6055.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count334
+\c@Item=\count335
+\c@Hfootnote=\count336
+)
+Package hyperref Info: Driver: hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
+\Fld@listcount=\count337
+\c@bookmark@seq@number=\count338
+\Hy@SectionHShift=\skip128
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 187.
+Package hyperref Info: Option `unicode' set `true' on input line 187.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen258
+\captionmargin=\dimen259
+\caption@leftmargin=\dimen260
+\caption@rightmargin=\dimen261
+\caption@width=\dimen262
+\caption@indent=\dimen263
+\caption@parindent=\dimen264
+\caption@hangindent=\dimen265
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count339
+\c@continuedfloat=\count340
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen266
+\caption@adjustwidth@linewidth=\dimen267
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+))
+(./etoc_doxygen.sty
+Package: etoc_doxygen 2023/07/01 v1.2b Completely customisable TOCs (JFB)
+\Etoc@toctoks=\toks35
+\c@etoc@tocid=\count341
+\etoc@framed@titlebox=\box120
+\etoc@framed@contentsbox=\box121
+)
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 20
+9.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 209.
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count342
+\l__pdf_internal_box=\box122
+)
+(./refman.aux
+
+LaTeX Warning: Label `doc-constructors' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-variable-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-variable-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-variable-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-constructors' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-variable-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+)
+\openout1 = `refman.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 209.
+LaTeX Font Info:    ... okay on input line 209.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count343
+\scratchdimen=\dimen268
+\scratchbox=\box123
+\nofMPsegments=\count344
+\nofMParguments=\count345
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count346
+\MPscratchDim=\dimen269
+\MPnumerator=\count347
+\makeMPintoPDFobject=\count348
+\everyMPtoPDFconversion=\toks37
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-31.2056pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
+* \marginparwidth=125.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package backref Info: ** backref set up for natbib ** on input line 209.
+Package hyperref Info: Link coloring ON on input line 209.
+(./refman.out) (./refman.out)
+\@outlinefile=\write5
+\openout5 = `refman.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+\Etoc@tf=\read4
+Package hyperref Info: Option `pageanchor' set `false' on input line 217.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 217.
+
+Package hyperref Info: Option `unicode' set `true' on input line 217.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 12.9599pt on input line 222.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 10.79993pt on input line 223.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 223.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 223
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 223
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 22
+3.
+
+(/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
+) [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
+st/fonts/enc/dvips/base/8r.enc}] [2
+
+]
+\tf@toc=\write6
+\openout6 = `refman.toc'.
+
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 8.99994pt on input line 231.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.29996pt on input line 231.
+ [1] [2] [3] [4
+
+]
+Package hyperref Info: Option `pageanchor' set `true' on input line 234.
+
+Chapter 1.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 18.66588pt on input line 236.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 18.66588pt on input line 236.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 22.39185pt on input line 236.
+(./annotated.tex
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 12.9599pt on input line 1.
+) [1
+
+] [2
+
+]
+Chapter 2.
+(./files.tex) [3] [4
+
+]
+Chapter 3.
+(./classChat.tex
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 10
+.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) <./classChat__coll__graph.pdf>
+<classChat__coll__graph.pdf, id=571, 173.64874pt x 196.735pt>
+File: classChat__coll__graph.pdf Graphic file (type pdf)
+<use classChat__coll__graph.pdf>
+Package pdftex.def Info: classChat__coll__graph.pdf  used on input line 19.
+(pdftex.def)             Requested size: 173.0pt x 196.00803pt.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 2
+5.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 25.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 26.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 26.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 26.
+ [5]
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 42.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 63.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 79.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 79.
+ [6] <./classChat_af53cc83d7d1df84e1952443c6da2554e_icgraph.pdf>
+<classChat_af53cc83d7d1df84e1952443c6da2554e_icgraph.pdf, id=617, 387.4475pt x 
+176.66pt>
+File: classChat_af53cc83d7d1df84e1952443c6da2554e_icgraph.pdf Graphic file (typ
+e pdf)
+<use classChat_af53cc83d7d1df84e1952443c6da2554e_icgraph.pdf>
+Package pdftex.def Info: classChat_af53cc83d7d1df84e1952443c6da2554e_icgraph.pd
+f  used on input line 114.
+(pdftex.def)             Requested size: 350.0pt x 159.58824pt.
+ <./classChat_a79939f88cfd296f84e43078975f7c134_icgraph.pdf>
+<classChat_a79939f88cfd296f84e43078975f7c134_icgraph.pdf, id=625, 261.97874pt x
+ 100.375pt>
+File: classChat_a79939f88cfd296f84e43078975f7c134_icgraph.pdf Graphic file (typ
+e pdf)
+<use classChat_a79939f88cfd296f84e43078975f7c134_icgraph.pdf>
+Package pdftex.def Info: classChat_a79939f88cfd296f84e43078975f7c134_icgraph.pd
+f  used on input line 138.
+(pdftex.def)             Requested size: 261.0pt x 100.00255pt.
+ [7]
+Underfull \hbox (badness 10000) detected at line 153
+[][][]
+ []
+
+ <./classChat_a82a5db8e25c485af7ce2d2135a85583f_icgraph.pdf>
+<classChat_a82a5db8e25c485af7ce2d2135a85583f_icgraph.pdf, id=644, 386.44376pt x
+ 138.5175pt>
+File: classChat_a82a5db8e25c485af7ce2d2135a85583f_icgraph.pdf Graphic file (typ
+e pdf)
+<use classChat_a82a5db8e25c485af7ce2d2135a85583f_icgraph.pdf>
+Package pdftex.def Info: classChat_a82a5db8e25c485af7ce2d2135a85583f_icgraph.pd
+f  used on input line 168.
+(pdftex.def)             Requested size: 350.0pt x 125.45508pt.
+)
+(./classClienteSocket.tex [8] <./classClienteSocket__coll__graph.pdf>
+<classClienteSocket__coll__graph.pdf, id=665, 172.645pt x 244.915pt>
+File: classClienteSocket__coll__graph.pdf Graphic file (type pdf)
+<use classClienteSocket__coll__graph.pdf>
+Package pdftex.def Info: classClienteSocket__coll__graph.pdf  used on input lin
+e 19.
+(pdftex.def)             Requested size: 172.0pt x 244.00252pt.
+ [9] <./classClienteSocket_aeac5e46455422745f66b87a63a5ee6ae_cgraph.pdf>
+<classClienteSocket_aeac5e46455422745f66b87a63a5ee6ae_cgraph.pdf, id=689, 376.4
+0625pt x 100.375pt>
+File: classClienteSocket_aeac5e46455422745f66b87a63a5ee6ae_cgraph.pdf Graphic f
+ile (type pdf)
+<use classClienteSocket_aeac5e46455422745f66b87a63a5ee6ae_cgraph.pdf>
+Package pdftex.def Info: classClienteSocket_aeac5e46455422745f66b87a63a5ee6ae_c
+graph.pdf  used on input line 95.
+(pdftex.def)             Requested size: 350.0pt x 93.3401pt.
+ [10] <./classClienteSocket_aad293836c4e0c552460dfe1f07667d39_icgraph.pdf>
+<classClienteSocket_aad293836c4e0c552460dfe1f07667d39_icgraph.pdf, id=713, 376.
+40625pt x 100.375pt>
+File: classClienteSocket_aad293836c4e0c552460dfe1f07667d39_icgraph.pdf Graphic 
+file (type pdf)
+<use classClienteSocket_aad293836c4e0c552460dfe1f07667d39_icgraph.pdf>
+Package pdftex.def Info: classClienteSocket_aad293836c4e0c552460dfe1f07667d39_i
+cgraph.pdf  used on input line 124.
+(pdftex.def)             Requested size: 350.0pt x 93.3401pt.
+ [11] [12]
+Underfull \hbox (badness 10000) detected at line 148
+[][][]
+ []
+
+ <./classClienteSocket_a13ae48df54e6f284951e57fcebf55069_icgraph.pdf>
+<classClienteSocket_a13ae48df54e6f284951e57fcebf55069_icgraph.pdf, id=734, 275.
+0275pt x 100.375pt>
+File: classClienteSocket_a13ae48df54e6f284951e57fcebf55069_icgraph.pdf Graphic 
+file (type pdf)
+<use classClienteSocket_a13ae48df54e6f284951e57fcebf55069_icgraph.pdf>
+Package pdftex.def Info: classClienteSocket_a13ae48df54e6f284951e57fcebf55069_i
+cgraph.pdf  used on input line 158.
+(pdftex.def)             Requested size: 274.0pt x 100.00868pt.
+
+Underfull \hbox (badness 10000) detected at line 175
+[][][]
+ []
+
+ <./classClienteSocket_ad217d24fed0bd7eeb015fc7d990da5d1_icgraph.pdf>
+<classClienteSocket_ad217d24fed0bd7eeb015fc7d990da5d1_icgraph.pdf, id=742, 258.
+9675pt x 100.375pt>
+File: classClienteSocket_ad217d24fed0bd7eeb015fc7d990da5d1_icgraph.pdf Graphic 
+file (type pdf)
+<use classClienteSocket_ad217d24fed0bd7eeb015fc7d990da5d1_icgraph.pdf>
+Package pdftex.def Info: classClienteSocket_ad217d24fed0bd7eeb015fc7d990da5d1_i
+cgraph.pdf  used on input line 187.
+(pdftex.def)             Requested size: 258.0pt x 100.01021pt.
+ [13] <./classClienteSocket_a05d91ad7f4dc849feb1b3ed814287d64_icgraph.pdf>
+<classClienteSocket_a05d91ad7f4dc849feb1b3ed814287d64_icgraph.pdf, id=760, 263.
+98625pt x 100.375pt>
+File: classClienteSocket_a05d91ad7f4dc849feb1b3ed814287d64_icgraph.pdf Graphic 
+file (type pdf)
+<use classClienteSocket_a05d91ad7f4dc849feb1b3ed814287d64_icgraph.pdf>
+Package pdftex.def Info: classClienteSocket_a05d91ad7f4dc849feb1b3ed814287d64_i
+cgraph.pdf  used on input line 221.
+(pdftex.def)             Requested size: 263.0pt x 100.00562pt.
+
+Underfull \hbox (badness 10000) detected at line 238
+[][][]
+ []
+
+ <./classClienteSocket_a343c2d9d87d3d7d16bf8c45c92c92590_icgraph.pdf>
+<classClienteSocket_a343c2d9d87d3d7d16bf8c45c92c92590_icgraph.pdf, id=768, 380.
+42125pt x 100.375pt>
+File: classClienteSocket_a343c2d9d87d3d7d16bf8c45c92c92590_icgraph.pdf Graphic 
+file (type pdf)
+<use classClienteSocket_a343c2d9d87d3d7d16bf8c45c92c92590_icgraph.pdf>
+Package pdftex.def Info: classClienteSocket_a343c2d9d87d3d7d16bf8c45c92c92590_i
+cgraph.pdf  used on input line 248.
+(pdftex.def)             Requested size: 350.0pt x 92.3507pt.
+ [14])
+(./structInfoCliente.tex <./structInfoCliente__coll__graph.pdf>
+<structInfoCliente__coll__graph.pdf, id=788, 135.50626pt x 164.615pt>
+File: structInfoCliente__coll__graph.pdf Graphic file (type pdf)
+<use structInfoCliente__coll__graph.pdf>
+Package pdftex.def Info: structInfoCliente__coll__graph.pdf  used on input line
+ 19.
+(pdftex.def)             Requested size: 135.0pt x 164.00673pt.
+ [15])
+(./structMensaje.tex <./structMensaje__coll__graph.pdf>
+<structMensaje__coll__graph.pdf, id=813, 127.47626pt x 164.615pt>
+File: structMensaje__coll__graph.pdf Graphic file (type pdf)
+<use structMensaje__coll__graph.pdf>
+Package pdftex.def Info: structMensaje__coll__graph.pdf  used on input line 19.
+
+(pdftex.def)             Requested size: 127.0pt x 164.00673pt.
+ [16] [17])
+(./classServerSocket.tex <./classServerSocket__coll__graph.pdf>
+<classServerSocket__coll__graph.pdf, id=852, 217.81375pt x 389.455pt>
+File: classServerSocket__coll__graph.pdf Graphic file (type pdf)
+<use classServerSocket__coll__graph.pdf>
+Package pdftex.def Info: classServerSocket__coll__graph.pdf  used on input line
+ 19.
+(pdftex.def)             Requested size: 217.0pt x 387.9981pt.
+ [18] [19] <./classServerSocket_a510674d924c2544e6b0069e39c36516b_cgraph.pdf>
+<classServerSocket_a510674d924c2544e6b0069e39c36516b_cgraph.pdf, id=920, 579.16
+376pt x 100.375pt>
+File: classServerSocket_a510674d924c2544e6b0069e39c36516b_cgraph.pdf Graphic fi
+le (type pdf)
+<use classServerSocket_a510674d924c2544e6b0069e39c36516b_cgraph.pdf>
+Package pdftex.def Info: classServerSocket_a510674d924c2544e6b0069e39c36516b_cg
+raph.pdf  used on input line 123.
+(pdftex.def)             Requested size: 350.0pt x 60.65889pt.
+ [20] <./classServerSocket_aa3909d8893c14aa0c1498312af89adc1_icgraph.pdf>
+<classServerSocket_aa3909d8893c14aa0c1498312af89adc1_icgraph.pdf, id=945, 304.1
+3625pt x 100.375pt>
+File: classServerSocket_aa3909d8893c14aa0c1498312af89adc1_icgraph.pdf Graphic f
+ile (type pdf)
+<use classServerSocket_aa3909d8893c14aa0c1498312af89adc1_icgraph.pdf>
+Package pdftex.def Info: classServerSocket_aa3909d8893c14aa0c1498312af89adc1_ic
+graph.pdf  used on input line 154.
+(pdftex.def)             Requested size: 303.0pt x 100.00255pt.
+ <./classServerSocket_a1a9dac66adae3be62dc422d16dd07fec_icgraph.pdf>
+<classServerSocket_a1a9dac66adae3be62dc422d16dd07fec_icgraph.pdf, id=953, 266.9
+975pt x 100.375pt>
+File: classServerSocket_a1a9dac66adae3be62dc422d16dd07fec_icgraph.pdf Graphic f
+ile (type pdf)
+<use classServerSocket_a1a9dac66adae3be62dc422d16dd07fec_icgraph.pdf>
+Package pdftex.def Info: classServerSocket_a1a9dac66adae3be62dc422d16dd07fec_ic
+graph.pdf  used on input line 178.
+(pdftex.def)             Requested size: 266.0pt x 100.01021pt.
+ <./classServerSocket_adbaa6db4d33a8630023710499f126cb4_icgraph.pdf>
+<classServerSocket_adbaa6db4d33a8630023710499f126cb4_icgraph.pdf, id=961, 579.1
+6376pt x 100.375pt>
+File: classServerSocket_adbaa6db4d33a8630023710499f126cb4_icgraph.pdf Graphic f
+ile (type pdf)
+<use classServerSocket_adbaa6db4d33a8630023710499f126cb4_icgraph.pdf>
+Package pdftex.def Info: classServerSocket_adbaa6db4d33a8630023710499f126cb4_ic
+graph.pdf  used on input line 196.
+(pdftex.def)             Requested size: 350.0pt x 60.65889pt.
+ [21] <./classServerSocket_a5c51707d83e73df462c3095c00f69d60_cgraph.pdf>
+<classServerSocket_a5c51707d83e73df462c3095c00f69d60_cgraph.pdf, id=976, 396.48
+125pt x 100.375pt>
+File: classServerSocket_a5c51707d83e73df462c3095c00f69d60_cgraph.pdf Graphic fi
+le (type pdf)
+<use classServerSocket_a5c51707d83e73df462c3095c00f69d60_cgraph.pdf>
+Package pdftex.def Info: classServerSocket_a5c51707d83e73df462c3095c00f69d60_cg
+raph.pdf  used on input line 214.
+(pdftex.def)             Requested size: 350.0pt x 88.60901pt.
+ <./classServerSocket_a5c51707d83e73df462c3095c00f69d60_icgraph.pdf>
+<classServerSocket_a5c51707d83e73df462c3095c00f69d60_icgraph.pdf, id=984, 406.5
+1875pt x 100.375pt>
+File: classServerSocket_a5c51707d83e73df462c3095c00f69d60_icgraph.pdf Graphic f
+ile (type pdf)
+<use classServerSocket_a5c51707d83e73df462c3095c00f69d60_icgraph.pdf>
+Package pdftex.def Info: classServerSocket_a5c51707d83e73df462c3095c00f69d60_ic
+graph.pdf  used on input line 222.
+(pdftex.def)             Requested size: 350.0pt x 86.42342pt.
+ <./classServerSocket_ad5cac02fb407df331c377d7cfb2731be_icgraph.pdf>
+<classServerSocket_ad5cac02fb407df331c377d7cfb2731be_icgraph.pdf, id=993, 278.0
+3876pt x 100.375pt>
+File: classServerSocket_ad5cac02fb407df331c377d7cfb2731be_icgraph.pdf Graphic f
+ile (type pdf)
+<use classServerSocket_ad5cac02fb407df331c377d7cfb2731be_icgraph.pdf>
+Package pdftex.def Info: classServerSocket_ad5cac02fb407df331c377d7cfb2731be_ic
+graph.pdf  used on input line 245.
+(pdftex.def)             Requested size: 277.0pt x 100.00102pt.
+ [22]
+Underfull \hbox (badness 10000) detected at line 260
+[][][]
+ []
+
+ <./classServerSocket_aed4f954cffee07ff80d8ce540ba8cefb_icgraph.pdf>
+<classServerSocket_aed4f954cffee07ff80d8ce540ba8cefb_icgraph.pdf, id=1009, 256.
+96pt x 100.375pt>
+File: classServerSocket_aed4f954cffee07ff80d8ce540ba8cefb_icgraph.pdf Graphic f
+ile (type pdf)
+<use classServerSocket_aed4f954cffee07ff80d8ce540ba8cefb_icgraph.pdf>
+Package pdftex.def Info: classServerSocket_aed4f954cffee07ff80d8ce540ba8cefb_ic
+graph.pdf  used on input line 272.
+(pdftex.def)             Requested size: 256.0pt x 100.00716pt.
+ <./classServerSocket_a83e5e2a03d21e3e383a3e67aa3e4a8fc_icgraph.pdf>
+<classServerSocket_a83e5e2a03d21e3e383a3e67aa3e4a8fc_icgraph.pdf, id=1017, 261.
+97874pt x 100.375pt>
+File: classServerSocket_a83e5e2a03d21e3e383a3e67aa3e4a8fc_icgraph.pdf Graphic f
+ile (type pdf)
+<use classServerSocket_a83e5e2a03d21e3e383a3e67aa3e4a8fc_icgraph.pdf>
+Package pdftex.def Info: classServerSocket_a83e5e2a03d21e3e383a3e67aa3e4a8fc_ic
+graph.pdf  used on input line 290.
+(pdftex.def)             Requested size: 261.0pt x 100.00255pt.
+ [23] <./classServerSocket_a9312853ed94ee2ff0a9bcc9b19fdaf08_icgraph.pdf>
+<classServerSocket_a9312853ed94ee2ff0a9bcc9b19fdaf08_icgraph.pdf, id=1032, 275.
+0275pt x 100.375pt>
+File: classServerSocket_a9312853ed94ee2ff0a9bcc9b19fdaf08_icgraph.pdf Graphic f
+ile (type pdf)
+<use classServerSocket_a9312853ed94ee2ff0a9bcc9b19fdaf08_icgraph.pdf>
+Package pdftex.def Info: classServerSocket_a9312853ed94ee2ff0a9bcc9b19fdaf08_ic
+graph.pdf  used on input line 317.
+(pdftex.def)             Requested size: 274.0pt x 100.00868pt.
+
+Underfull \hbox (badness 10000) detected at line 330
+[][][]
+ []
+
+ <./classServerSocket_a45a66da337baf176de70f6a054bfa74d_icgraph.pdf>
+<classServerSocket_a45a66da337baf176de70f6a054bfa74d_icgraph.pdf, id=1040, 429.
+605pt x 119.44624pt>
+File: classServerSocket_a45a66da337baf176de70f6a054bfa74d_icgraph.pdf Graphic f
+ile (type pdf)
+<use classServerSocket_a45a66da337baf176de70f6a054bfa74d_icgraph.pdf>
+Package pdftex.def Info: classServerSocket_a45a66da337baf176de70f6a054bfa74d_ic
+graph.pdf  used on input line 338.
+(pdftex.def)             Requested size: 350.0pt x 97.31409pt.
+ [24] <./classServerSocket_a1cad4604560488599b66eebe8d590682_icgraph.pdf>
+<classServerSocket_a1cad4604560488599b66eebe8d590682_icgraph.pdf, id=1056, 401.
+5pt x 125.46875pt>
+File: classServerSocket_a1cad4604560488599b66eebe8d590682_icgraph.pdf Graphic f
+ile (type pdf)
+<use classServerSocket_a1cad4604560488599b66eebe8d590682_icgraph.pdf>
+Package pdftex.def Info: classServerSocket_a1cad4604560488599b66eebe8d590682_ic
+graph.pdf  used on input line 356.
+(pdftex.def)             Requested size: 350.0pt x 109.38283pt.
+
+Underfull \hbox (badness 10000) detected at line 369
+[][][]
+ []
+
+ <./classServerSocket_a4659d477cc4d9140064cdaf33c57d3c4_icgraph.pdf>
+<classServerSocket_a4659d477cc4d9140064cdaf33c57d3c4_icgraph.pdf, id=1064, 287.
+0725pt x 112.42pt>
+File: classServerSocket_a4659d477cc4d9140064cdaf33c57d3c4_icgraph.pdf Graphic f
+ile (type pdf)
+<use classServerSocket_a4659d477cc4d9140064cdaf33c57d3c4_icgraph.pdf>
+Package pdftex.def Info: classServerSocket_a4659d477cc4d9140064cdaf33c57d3c4_ic
+graph.pdf  used on input line 377.
+(pdftex.def)             Requested size: 286.0pt x 112.00288pt.
+ [25] <./classServerSocket_a26559e98b94c989b0011a096d06a163b_icgraph.pdf>
+<classServerSocket_a26559e98b94c989b0011a096d06a163b_icgraph.pdf, id=1080, 413.
+545pt x 112.42pt>
+File: classServerSocket_a26559e98b94c989b0011a096d06a163b_icgraph.pdf Graphic f
+ile (type pdf)
+<use classServerSocket_a26559e98b94c989b0011a096d06a163b_icgraph.pdf>
+Package pdftex.def Info: classServerSocket_a26559e98b94c989b0011a096d06a163b_ic
+graph.pdf  used on input line 398.
+(pdftex.def)             Requested size: 350.0pt x 95.14746pt.
+
+Underfull \hbox (badness 10000) detected at line 418
+[][][]
+ []
+
+ <./classServerSocket_aa2caeb9ab043b2f1f86dd7deeaefa28a_icgraph.pdf>
+<classServerSocket_aa2caeb9ab043b2f1f86dd7deeaefa28a_icgraph.pdf, id=1088, 485.
+815pt x 188.705pt>
+File: classServerSocket_aa2caeb9ab043b2f1f86dd7deeaefa28a_icgraph.pdf Graphic f
+ile (type pdf)
+<use classServerSocket_aa2caeb9ab043b2f1f86dd7deeaefa28a_icgraph.pdf>
+Package pdftex.def Info: classServerSocket_aa2caeb9ab043b2f1f86dd7deeaefa28a_ic
+graph.pdf  used on input line 429.
+(pdftex.def)             Requested size: 350.0pt x 135.9481pt.
+ [26] <./classServerSocket_a882e25aade6e7c1be34dca9c48340728_icgraph.pdf>
+<classServerSocket_a882e25aade6e7c1be34dca9c48340728_icgraph.pdf, id=1104, 383.
+4325pt x 100.375pt>
+File: classServerSocket_a882e25aade6e7c1be34dca9c48340728_icgraph.pdf Graphic f
+ile (type pdf)
+<use classServerSocket_a882e25aade6e7c1be34dca9c48340728_icgraph.pdf>
+Package pdftex.def Info: classServerSocket_a882e25aade6e7c1be34dca9c48340728_ic
+graph.pdf  used on input line 452.
+(pdftex.def)             Requested size: 350.0pt x 91.62778pt.
+
+Underfull \hbox (badness 10000) detected at line 469
+[][][]
+ []
+
+ <./classServerSocket_a54e233b0852ed5cd338af48353f4868b_cgraph.pdf>
+<classServerSocket_a54e233b0852ed5cd338af48353f4868b_cgraph.pdf, id=1114, 412.5
+4124pt x 112.42pt>
+File: classServerSocket_a54e233b0852ed5cd338af48353f4868b_cgraph.pdf Graphic fi
+le (type pdf)
+<use classServerSocket_a54e233b0852ed5cd338af48353f4868b_cgraph.pdf>
+Package pdftex.def Info: classServerSocket_a54e233b0852ed5cd338af48353f4868b_cg
+raph.pdf  used on input line 480.
+(pdftex.def)             Requested size: 350.0pt x 95.37904pt.
+ [27] <./classServerSocket_a54e233b0852ed5cd338af48353f4868b_icgraph.pdf>
+<classServerSocket_a54e233b0852ed5cd338af48353f4868b_icgraph.pdf, id=1129, 301.
+125pt x 112.42pt>
+File: classServerSocket_a54e233b0852ed5cd338af48353f4868b_icgraph.pdf Graphic f
+ile (type pdf)
+<use classServerSocket_a54e233b0852ed5cd338af48353f4868b_icgraph.pdf>
+Package pdftex.def Info: classServerSocket_a54e233b0852ed5cd338af48353f4868b_ic
+graph.pdf  used on input line 488.
+(pdftex.def)             Requested size: 300.0pt x 112.00974pt.
+ [28]) [29]
+[30
+
+]
+Chapter 4.
+(./chat_8h.tex <./chat_8h__incl.pdf>
+<chat_8h__incl.pdf, id=1156, 243.91125pt x 156.585pt>
+File: chat_8h__incl.pdf Graphic file (type pdf)
+<use chat_8h__incl.pdf>
+Package pdftex.def Info: chat_8h__incl.pdf  used on input line 11.
+(pdftex.def)             Requested size: 243.0pt x 156.00162pt.
+ <./chat_8h__dep__incl.pdf>
+<chat_8h__dep__incl.pdf, id=1164, 397.485pt x 156.585pt>
+File: chat_8h__dep__incl.pdf Graphic file (type pdf)
+<use chat_8h__dep__incl.pdf>
+Package pdftex.def Info: chat_8h__dep__incl.pdf  used on input line 19.
+(pdftex.def)             Requested size: 350.0pt x 137.88362pt.
+ [31])
+(./chat_8h_source.tex) (./clienteSocket_8h.tex <./clienteSocket_8h__incl.pdf>
+<clienteSocket_8h__incl.pdf, id=1194, 206.7725pt x 156.585pt>
+File: clienteSocket_8h__incl.pdf Graphic file (type pdf)
+<use clienteSocket_8h__incl.pdf>
+Package pdftex.def Info: clienteSocket_8h__incl.pdf  used on input line 10.
+(pdftex.def)             Requested size: 206.0pt x 156.004pt.
+ <./clienteSocket_8h__dep__incl.pdf>
+<clienteSocket_8h__dep__incl.pdf, id=1202, 315.1775pt x 156.585pt>
+File: clienteSocket_8h__dep__incl.pdf Graphic file (type pdf)
+<use clienteSocket_8h__dep__incl.pdf>
+Package pdftex.def Info: clienteSocket_8h__dep__incl.pdf  used on input line 18
+.
+(pdftex.def)             Requested size: 314.0pt x 156.00879pt.
+ [32]) (./clienteSocket_8h_source.tex)
+(./socket_8h.tex <./socket_8h__incl.pdf>
+<socket_8h__incl.pdf, id=1231, 386.44376pt x 156.585pt>
+File: socket_8h__incl.pdf Graphic file (type pdf)
+<use socket_8h__incl.pdf>
+Package pdftex.def Info: socket_8h__incl.pdf  used on input line 13.
+(pdftex.def)             Requested size: 350.0pt x 141.81879pt.
+ [33] <./socket_8h__dep__incl.pdf>
+<socket_8h__dep__incl.pdf, id=1247, 285.065pt x 156.585pt>
+File: socket_8h__dep__incl.pdf Graphic file (type pdf)
+<use socket_8h__dep__incl.pdf>
+Package pdftex.def Info: socket_8h__dep__incl.pdf  used on input line 21.
+(pdftex.def)             Requested size: 284.0pt x 155.99922pt.
+)
+(./socket_8h_source.tex [34]) (./chat_8cpp.tex <./chat_8cpp__incl.pdf>
+<chat_8cpp__incl.pdf, id=1296, 243.91125pt x 212.795pt>
+File: chat_8cpp__incl.pdf Graphic file (type pdf)
+<use chat_8cpp__incl.pdf>
+Package pdftex.def Info: chat_8cpp__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 243.0pt x 212.0022pt.
+)
+(./clienteSocket_8cpp.tex [35] <./clienteSocket_8cpp__incl.pdf>
+<clienteSocket_8cpp__incl.pdf, id=1308, 495.8525pt x 212.795pt>
+File: clienteSocket_8cpp__incl.pdf Graphic file (type pdf)
+<use clienteSocket_8cpp__incl.pdf>
+Package pdftex.def Info: clienteSocket_8cpp__incl.pdf  used on input line 18.
+(pdftex.def)             Requested size: 350.0pt x 150.20232pt.
+ [36]
+Underfull \hbox (badness 10000) detected at line 26
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 33
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 36
+[][][]
+ []
+
+) (./main__cliente_8cpp.tex <./main__cliente_8cpp__incl.pdf>
+<main__cliente_8cpp__incl.pdf, id=1324, 760.8425pt x 212.795pt>
+File: main__cliente_8cpp__incl.pdf Graphic file (type pdf)
+<use main__cliente_8cpp__incl.pdf>
+Package pdftex.def Info: main__cliente_8cpp__incl.pdf  used on input line 21.
+(pdftex.def)             Requested size: 350.0pt x 97.89012pt.
+
+Underfull \hbox (badness 10000) detected at line 38
+[][][]
+ []
+
+[37]
+Underfull \hbox (badness 10000) detected at line 45
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 48
+[][][]
+ []
+
+ <./main__cliente_8cpp_aac648d18ad9d8ac1b8a0e1c984adae6c_icgraph.pdf>
+<main__cliente_8cpp_aac648d18ad9d8ac1b8a0e1c984adae6c_icgraph.pdf, id=1348, 327
+.2225pt x 119.44624pt>
+File: main__cliente_8cpp_aac648d18ad9d8ac1b8a0e1c984adae6c_icgraph.pdf Graphic 
+file (type pdf)
+<use main__cliente_8cpp_aac648d18ad9d8ac1b8a0e1c984adae6c_icgraph.pdf>
+Package pdftex.def Info: main__cliente_8cpp_aac648d18ad9d8ac1b8a0e1c984adae6c_i
+cgraph.pdf  used on input line 80.
+(pdftex.def)             Requested size: 326.0pt x 118.99939pt.
+ <./main__cliente_8cpp_a1f5ab905765ecc5efc5dc01d8f63421e_cgraph.pdf>
+<main__cliente_8cpp_a1f5ab905765ecc5efc5dc01d8f63421e_cgraph.pdf, id=1358, 309.
+155pt x 176.66pt>
+File: main__cliente_8cpp_a1f5ab905765ecc5efc5dc01d8f63421e_cgraph.pdf Graphic f
+ile (type pdf)
+<use main__cliente_8cpp_a1f5ab905765ecc5efc5dc01d8f63421e_cgraph.pdf>
+Package pdftex.def Info: main__cliente_8cpp_a1f5ab905765ecc5efc5dc01d8f63421e_c
+graph.pdf  used on input line 101.
+(pdftex.def)             Requested size: 308.0pt x 176.0153pt.
+ [38] <./main__cliente_8cpp_a1f5ab905765ecc5efc5dc01d8f63421e_icgraph.pdf>
+<main__cliente_8cpp_a1f5ab905765ecc5efc5dc01d8f63421e_icgraph.pdf, id=1373, 233
+.87375pt x 100.375pt>
+File: main__cliente_8cpp_a1f5ab905765ecc5efc5dc01d8f63421e_icgraph.pdf Graphic 
+file (type pdf)
+<use main__cliente_8cpp_a1f5ab905765ecc5efc5dc01d8f63421e_icgraph.pdf>
+Package pdftex.def Info: main__cliente_8cpp_a1f5ab905765ecc5efc5dc01d8f63421e_i
+cgraph.pdf  used on input line 109.
+(pdftex.def)             Requested size: 233.0pt x 100.00562pt.
+ <./main__cliente_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf>
+<main__cliente_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=1381, 423.
+5825pt x 317.185pt>
+File: main__cliente_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf Graphic f
+ile (type pdf)
+<use main__cliente_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf>
+Package pdftex.def Info: main__cliente_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_c
+graph.pdf  used on input line 130.
+(pdftex.def)             Requested size: 350.0pt x 262.09222pt.
+) (./main__server_8cpp.tex [39] <./main__server_8cpp__incl.pdf>
+<main__server_8cpp__incl.pdf, id=1396, 1084.05pt x 212.795pt>
+File: main__server_8cpp__incl.pdf Graphic file (type pdf)
+<use main__server_8cpp__incl.pdf>
+Package pdftex.def Info: main__server_8cpp__incl.pdf  used on input line 25.
+(pdftex.def)             Requested size: 350.0pt x 68.70297pt.
+ [40]
+Underfull \hbox (badness 10000) detected at line 44
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 51
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 54
+[][][]
+ []
+
+ <./main__server_8cpp_ac826921c76f295155dbc1494a2e2ecef_cgraph.pdf>
+<main__server_8cpp_ac826921c76f295155dbc1494a2e2ecef_cgraph.pdf, id=1421, 289.0
+8pt x 100.375pt>
+File: main__server_8cpp_ac826921c76f295155dbc1494a2e2ecef_cgraph.pdf Graphic fi
+le (type pdf)
+<use main__server_8cpp_ac826921c76f295155dbc1494a2e2ecef_cgraph.pdf>
+Package pdftex.def Info: main__server_8cpp_ac826921c76f295155dbc1494a2e2ecef_cg
+raph.pdf  used on input line 97.
+(pdftex.def)             Requested size: 288.0pt x 100.00562pt.
+ [41] <./main__server_8cpp_ac826921c76f295155dbc1494a2e2ecef_icgraph.pdf>
+<main__server_8cpp_ac826921c76f295155dbc1494a2e2ecef_icgraph.pdf, id=1442, 350.
+30875pt x 100.375pt>
+File: main__server_8cpp_ac826921c76f295155dbc1494a2e2ecef_icgraph.pdf Graphic f
+ile (type pdf)
+<use main__server_8cpp_ac826921c76f295155dbc1494a2e2ecef_icgraph.pdf>
+Package pdftex.def Info: main__server_8cpp_ac826921c76f295155dbc1494a2e2ecef_ic
+graph.pdf  used on input line 105.
+(pdftex.def)             Requested size: 349.0pt x 100.00716pt.
+ <./main__server_8cpp_ad9d9b85a0d58433bb367fa045ae09f51_cgraph.pdf>
+<main__server_8cpp_ad9d9b85a0d58433bb367fa045ae09f51_cgraph.pdf, id=1452, 489.8
+3pt x 403.5075pt>
+File: main__server_8cpp_ad9d9b85a0d58433bb367fa045ae09f51_cgraph.pdf Graphic fi
+le (type pdf)
+<use main__server_8cpp_ad9d9b85a0d58433bb367fa045ae09f51_cgraph.pdf>
+Package pdftex.def Info: main__server_8cpp_ad9d9b85a0d58433bb367fa045ae09f51_cg
+raph.pdf  used on input line 134.
+(pdftex.def)             Requested size: 350.0pt x 288.32712pt.
+ [42] <./main__server_8cpp_ad9d9b85a0d58433bb367fa045ae09f51_icgraph.pdf>
+<main__server_8cpp_ad9d9b85a0d58433bb367fa045ae09f51_icgraph.pdf, id=1468, 238.
+8925pt x 100.375pt>
+File: main__server_8cpp_ad9d9b85a0d58433bb367fa045ae09f51_icgraph.pdf Graphic f
+ile (type pdf)
+<use main__server_8cpp_ad9d9b85a0d58433bb367fa045ae09f51_icgraph.pdf>
+Package pdftex.def Info: main__server_8cpp_ad9d9b85a0d58433bb367fa045ae09f51_ic
+graph.pdf  used on input line 142.
+(pdftex.def)             Requested size: 238.0pt x 99.9995pt.
+ <./main__server_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf>
+<main__server_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=1476, 628.3
+475pt x 658.46pt>
+File: main__server_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf Graphic fi
+le (type pdf)
+<use main__server_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf>
+Package pdftex.def Info: main__server_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cg
+raph.pdf  used on input line 163.
+(pdftex.def)             Requested size: 350.0pt x 366.76582pt.
+ [43]
+Underfull \hbox (badness 10000) detected at line 176
+[][][]
+ []
+
+ <./main__server_8cpp_a58eb3c831f0a4adc0138377666592749_icgraph.pdf>
+<main__server_8cpp_a58eb3c831f0a4adc0138377666592749_icgraph.pdf, id=1492, 483.
+8075pt x 100.375pt>
+File: main__server_8cpp_a58eb3c831f0a4adc0138377666592749_icgraph.pdf Graphic f
+ile (type pdf)
+<use main__server_8cpp_a58eb3c831f0a4adc0138377666592749_icgraph.pdf>
+Package pdftex.def Info: main__server_8cpp_a58eb3c831f0a4adc0138377666592749_ic
+graph.pdf  used on input line 184.
+(pdftex.def)             Requested size: 350.0pt x 72.6176pt.
+)
+(./socket_8cpp.tex <./socket_8cpp__incl.pdf>
+<socket_8cpp__incl.pdf, id=1500, 575.14874pt x 212.795pt>
+File: socket_8cpp__incl.pdf Graphic file (type pdf)
+<use socket_8cpp__incl.pdf>
+Package pdftex.def Info: socket_8cpp__incl.pdf  used on input line 18.
+(pdftex.def)             Requested size: 350.0pt x 129.49628pt.
+ [44]
+Underfull \hbox (badness 10000) detected at line 26
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 33
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 36
+[][][]
+ []
+
+) [45] [46
+
+] (./refman.ind
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 22.39185pt on input line 1.
+ [47
+
+
+] [48]) (./refman.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `refman.out' has not changed.
+(rerunfilecheck)             Checksum: 7F2234E116FCF58A85B17B0C87634946;18590.
+ ) 
+Here is how much of TeX's memory you used:
+ 18953 strings out of 477136
+ 328175 string characters out of 5813393
+ 1870388 words of memory out of 6000000
+ 38557 multiletter control sequences out of 15000+600000
+ 566631 words of font info for 99 fonts, out of 8000000 for 9000
+ 430 hyphenation exceptions out of 8191
+ 101i,16n,117p,447b,855s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/cour
+ier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on refman.pdf (54 pages, 596771 bytes).
+PDF statistics:
+ 1775 PDF objects out of 2073 (max. 8388607)
+ 1510 compressed objects within 16 object streams
+ 315 named destinations out of 1000 (max. 500000)
+ 1042 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,580 @@
+\doxysection{Server\+Socket Class Reference}
+\hypertarget{classServerSocket}{}\label{classServerSocket}\index{ServerSocket@{ServerSocket}}
+
+
+Clase administradora del servidor concurrente.  
+
+
+
+
+{\ttfamily \#include $<$socket.\+h$>$}
+
+
+
+Collaboration diagram for Server\+Socket\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classServerSocket__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classServerSocket_a2b3098589541243241ca25495155186c}{Server\+Socket}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. Inicializa el servidor en estado "{}apagado"{} y contadores en 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classServerSocket_a510674d924c2544e6b0069e39c36516b}{\texorpdfstring{$\sim$}{\string~}\+Server\+Socket}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Cierra el socket principal para liberar el puerto del SO. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classServerSocket_aed4f954cffee07ff80d8ce540ba8cefb}{crear}} ()
+\begin{DoxyCompactList}\small\item\em Crea el socket del servidor usando la syscall socket(). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classServerSocket_ad5cac02fb407df331c377d7cfb2731be}{configurar}} (const char \texorpdfstring{$\ast$}{*}ip, int puerto)
+\begin{DoxyCompactList}\small\item\em Configura la estructura sockaddr\+\_\+in con la IP y Puerto deseados. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classServerSocket_a1a9dac66adae3be62dc422d16dd07fec}{bindear}} ()
+\begin{DoxyCompactList}\small\item\em Vincula el socket a la dirección IP/\+Puerto en el Sistema Operativo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classServerSocket_a9312853ed94ee2ff0a9bcc9b19fdaf08}{escuchar}} (int espera=5)
+\begin{DoxyCompactList}\small\item\em Pone al socket en modo pasivo para escuchar conexiones. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServerSocket_aa3909d8893c14aa0c1498312af89adc1}{aceptar\+Clientes}} ()
+\begin{DoxyCompactList}\small\item\em Bucle infinito (para correr en un hilo aparte) que acepta conexiones. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classServerSocket_a54e233b0852ed5cd338af48353f4868b}{tomar\+Siguiente\+Cliente}} ()
+\begin{DoxyCompactList}\small\item\em Extrae al siguiente cliente de la cola y lo marca como activo. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classServerSocket_aa2caeb9ab043b2f1f86dd7deeaefa28a}{obtener\+Nombre\+Por\+Socket}} (int socket)
+\begin{DoxyCompactList}\small\item\em Busca en el vector lista\+Clientes el nombre asociado a un socket. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classServerSocket_a882e25aade6e7c1be34dca9c48340728}{recibir}} ()
+\begin{DoxyCompactList}\small\item\em Recibe datos del cliente que está siendo atendido ACTUALMENTE. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServerSocket_a83e5e2a03d21e3e383a3e67aa3e4a8fc}{enviar}} (const std\+::string \&msg)
+\begin{DoxyCompactList}\small\item\em Envía datos al cliente que está siendo atendido ACTUALMENTE. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServerSocket_adbaa6db4d33a8630023710499f126cb4}{cerrar\+Cliente}} ()
+\begin{DoxyCompactList}\small\item\em Cierra la conexión con un cliente específico. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServerSocket_a5c51707d83e73df462c3095c00f69d60}{cerrar\+Servidor}} ()
+\begin{DoxyCompactList}\small\item\em Apaga todo el servidor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classServerSocket_a1cad4604560488599b66eebe8d590682}{get\+Cliente\+Actual}} ()
+\begin{DoxyCompactList}\small\item\em Getter para obtener el ID del socket activo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classServerSocket_a4659d477cc4d9140064cdaf33c57d3c4}{hay\+Clientes\+En\+Cola}} ()
+\begin{DoxyCompactList}\small\item\em Verifica si hay personas esperando en la fila. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classServerSocket_a45a66da337baf176de70f6a054bfa74d}{estoy\+Atendiendo}} ()
+\begin{DoxyCompactList}\small\item\em Verifica si el agente está ocupado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServerSocket_a26559e98b94c989b0011a096d06a163b}{liberar\+Cliente\+Actual}} ()
+\begin{DoxyCompactList}\small\item\em Resetea el estado del agente a "{}\+Libre"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::queue$<$ int $>$ \mbox{\hyperlink{classServerSocket_af71f918ccba38573d9b3533fc07e28bb}{cola\+Clientes}}
+\begin{DoxyCompactList}\small\item\em Cola de espera "{}\+First-\/\+In, First-\/\+Out"{} (FIFO). \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structInfoCliente}{Info\+Cliente}} $>$ \mbox{\hyperlink{classServerSocket_acdbcfe4963922584211482b08022c85b}{lista\+Clientes}}
+\begin{DoxyCompactList}\small\item\em Base de datos en memoria de todos los conectados. \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{classServerSocket_abefc51098ff2728273fd66cb9c479b5e}{mtx\+Cola}}
+\begin{DoxyCompactList}\small\item\em Mutex para proteger la cola de condiciones de carrera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classServerSocket_a7dcc428768812210c5e00abbd68cd9cc}{server\+Socket}}
+\begin{DoxyCompactList}\small\item\em Descriptor del socket principal que escucha ("{}\+El Oído"{}). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classServerSocket_a2183a4115ebb3e3bc13fa0f8c35c43f3}{cliente\+Actual}}
+\begin{DoxyCompactList}\small\item\em Socket del cliente que está siendo atendido actualmente (-\/1 si libre). \end{DoxyCompactList}\item 
+sockaddr\+\_\+in \mbox{\hyperlink{classServerSocket_a0c3362cb3371c5b521ec51e068ef408d}{server\+Addr}}
+\begin{DoxyCompactList}\small\item\em Configuración de red (IP/\+Puerto). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classServerSocket_a4772fc6ab28c449777b8811074ecd56c}{contador\+ID}}
+\begin{DoxyCompactList}\small\item\em Contador para generar IDs únicos (1, 2, 3...). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase administradora del servidor concurrente. 
+
+
+\begin{DoxyItemize}
+\item Responsabilidades\+:
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item Escuchar conexiones entrantes en un puerto específico.
+\item Gestionar la concurrencia mediante hilos (Acceptor Thread vs Main Thread).
+\item Administrar la cola de espera (FIFO) para atención al cliente.
+\item Mantener el registro de todos los clientes conectados. 
+\end{DoxyEnumerate}
+
+\label{doc-constructors}
+\Hypertarget{classServerSocket_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classServerSocket_a2b3098589541243241ca25495155186c}\index{ServerSocket@{ServerSocket}!ServerSocket@{ServerSocket}}
+\index{ServerSocket@{ServerSocket}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{ServerSocket()}{ServerSocket()}}
+{\footnotesize\ttfamily \label{classServerSocket_a2b3098589541243241ca25495155186c} 
+Server\+Socket\+::\+Server\+Socket (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor. Inicializa el servidor en estado "{}apagado"{} y contadores en 0. 
+
+Constructor. Inicializa los descriptores en -\/1 (estado inválido). \Hypertarget{classServerSocket_a510674d924c2544e6b0069e39c36516b}\index{ServerSocket@{ServerSocket}!````~ServerSocket@{\texorpdfstring{$\sim$}{\string~}ServerSocket}}
+\index{````~ServerSocket@{\texorpdfstring{$\sim$}{\string~}ServerSocket}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ServerSocket()}{\string~ServerSocket()}}
+{\footnotesize\ttfamily \label{classServerSocket_a510674d924c2544e6b0069e39c36516b} 
+Server\+Socket\+::\texorpdfstring{$\sim$}{\string~}\+Server\+Socket (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor. Cierra el socket principal para liberar el puerto del SO. 
+
+Destructor. Llama a \doxylink{classServerSocket_a5c51707d83e73df462c3095c00f69d60}{cerrar\+Servidor()} para asegurar limpieza de recursos. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServerSocket_a510674d924c2544e6b0069e39c36516b_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{classServerSocket_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classServerSocket_aa3909d8893c14aa0c1498312af89adc1}\index{ServerSocket@{ServerSocket}!aceptarClientes@{aceptarClientes}}
+\index{aceptarClientes@{aceptarClientes}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{aceptarClientes()}{aceptarClientes()}}
+{\footnotesize\ttfamily \label{classServerSocket_aa3909d8893c14aa0c1498312af89adc1} 
+void Server\+Socket\+::aceptar\+Clientes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Bucle infinito (para correr en un hilo aparte) que acepta conexiones. 
+
+Bucle infinito que corre en un hilo secundario (Background).
+
+
+\begin{DoxyItemize}
+\item Cuando llega alguien, lo registra, lo mete a la cola y le envía señal de espera.
+\item Thread-\/\+Safe\+: Usa mtx\+Cola al modificar la cola.
+\item Su única tarea es esperar a que alguien se conecte y meterlo a la cola.
+\item CRÍ\+TICO\+: Usa Mutex para proteger el acceso a \textquotesingle{}cola\+Clientes\textquotesingle{} y \textquotesingle{}lista\+Clientes\textquotesingle{}. 
+\end{DoxyItemize}Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classServerSocket_aa3909d8893c14aa0c1498312af89adc1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classServerSocket_a1a9dac66adae3be62dc422d16dd07fec}\index{ServerSocket@{ServerSocket}!bindear@{bindear}}
+\index{bindear@{bindear}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{bindear()}{bindear()}}
+{\footnotesize\ttfamily \label{classServerSocket_a1a9dac66adae3be62dc422d16dd07fec} 
+bool Server\+Socket\+::bindear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Vincula el socket a la dirección IP/\+Puerto en el Sistema Operativo. 
+
+"{}\+Amarra"{} el socket a un puerto específico de la máquina.
+
+
+\begin{DoxyItemize}
+\item Utiliza la syscall bind(). Si falla, usualmente es porque el puerto está ocupado.
+\item Nota técnica\+: Se usa \textquotesingle{}\+::bind\textquotesingle{} (con dos puntos) para decirle al compilador que use la función bind() original de C (global) y no std\+::bind de C++. 
+\end{DoxyItemize}Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{classServerSocket_a1a9dac66adae3be62dc422d16dd07fec_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classServerSocket_adbaa6db4d33a8630023710499f126cb4}\index{ServerSocket@{ServerSocket}!cerrarCliente@{cerrarCliente}}
+\index{cerrarCliente@{cerrarCliente}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{cerrarCliente()}{cerrarCliente()}}
+{\footnotesize\ttfamily \label{classServerSocket_adbaa6db4d33a8630023710499f126cb4} 
+void Server\+Socket\+::cerrar\+Cliente (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Cierra la conexión con un cliente específico. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServerSocket_adbaa6db4d33a8630023710499f126cb4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classServerSocket_a5c51707d83e73df462c3095c00f69d60}\index{ServerSocket@{ServerSocket}!cerrarServidor@{cerrarServidor}}
+\index{cerrarServidor@{cerrarServidor}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{cerrarServidor()}{cerrarServidor()}}
+{\footnotesize\ttfamily \label{classServerSocket_a5c51707d83e73df462c3095c00f69d60} 
+void Server\+Socket\+::cerrar\+Servidor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Apaga todo el servidor. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServerSocket_a5c51707d83e73df462c3095c00f69d60_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServerSocket_a5c51707d83e73df462c3095c00f69d60_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classServerSocket_ad5cac02fb407df331c377d7cfb2731be}\index{ServerSocket@{ServerSocket}!configurar@{configurar}}
+\index{configurar@{configurar}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{configurar()}{configurar()}}
+{\footnotesize\ttfamily \label{classServerSocket_ad5cac02fb407df331c377d7cfb2731be} 
+bool Server\+Socket\+::configurar (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{ip}{, }\item[{int}]{puerto}{}\end{DoxyParamCaption})}
+
+
+
+Configura la estructura sockaddr\+\_\+in con la IP y Puerto deseados. 
+
+Prepara la estructura de dirección.
+
+
+\begin{DoxyItemize}
+\item Utiliza htons y inet\+\_\+pton para asegurar que los datos sean legibles por la red (Big Endian). 
+\end{DoxyItemize}Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classServerSocket_ad5cac02fb407df331c377d7cfb2731be_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classServerSocket_aed4f954cffee07ff80d8ce540ba8cefb}\index{ServerSocket@{ServerSocket}!crear@{crear}}
+\index{crear@{crear}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{crear()}{crear()}}
+{\footnotesize\ttfamily \label{classServerSocket_aed4f954cffee07ff80d8ce540ba8cefb} 
+bool Server\+Socket\+::crear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Crea el socket del servidor usando la syscall socket(). 
+
+Solicita un socket maestro al Kernel.
+
+\begin{DoxyReturn}{Returns}
+true si se creó el descriptor correctamente.
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item AF\+\_\+\+INET\+: IPv4.
+\item SOCK\+\_\+\+STREAM\+: TCP (Orientado a conexión). 
+\end{DoxyItemize}Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classServerSocket_aed4f954cffee07ff80d8ce540ba8cefb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classServerSocket_a83e5e2a03d21e3e383a3e67aa3e4a8fc}\index{ServerSocket@{ServerSocket}!enviar@{enviar}}
+\index{enviar@{enviar}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{enviar()}{enviar()}}
+{\footnotesize\ttfamily \label{classServerSocket_a83e5e2a03d21e3e383a3e67aa3e4a8fc} 
+void Server\+Socket\+::enviar (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg}{}\end{DoxyParamCaption})}
+
+
+
+Envía datos al cliente que está siendo atendido ACTUALMENTE. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{classServerSocket_a83e5e2a03d21e3e383a3e67aa3e4a8fc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classServerSocket_a9312853ed94ee2ff0a9bcc9b19fdaf08}\index{ServerSocket@{ServerSocket}!escuchar@{escuchar}}
+\index{escuchar@{escuchar}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{escuchar()}{escuchar()}}
+{\footnotesize\ttfamily \label{classServerSocket_a9312853ed94ee2ff0a9bcc9b19fdaf08} 
+bool Server\+Socket\+::escuchar (\begin{DoxyParamCaption}\item[{int}]{espera}{ = {\ttfamily 5}}\end{DoxyParamCaption})}
+
+
+
+Pone al socket en modo pasivo para escuchar conexiones. 
+
+Pone el socket en modo pasivo (escucha).
+
+
+\begin{DoxyParams}{Parameters}
+{\em espera} & Tamaño del backlog (cuántas conexiones pendientes admite el kernel).\\
+\hline
+{\em espera} & Longitud de la cola de conexiones pendientes del Kernel (Backlog). \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{classServerSocket_a9312853ed94ee2ff0a9bcc9b19fdaf08_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classServerSocket_a45a66da337baf176de70f6a054bfa74d}\index{ServerSocket@{ServerSocket}!estoyAtendiendo@{estoyAtendiendo}}
+\index{estoyAtendiendo@{estoyAtendiendo}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{estoyAtendiendo()}{estoyAtendiendo()}}
+{\footnotesize\ttfamily \label{classServerSocket_a45a66da337baf176de70f6a054bfa74d} 
+bool Server\+Socket\+::estoy\+Atendiendo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Verifica si el agente está ocupado. 
+
+\begin{DoxyReturn}{Returns}
+true si cliente\+Actual != -\/1. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServerSocket_a45a66da337baf176de70f6a054bfa74d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classServerSocket_a1cad4604560488599b66eebe8d590682}\index{ServerSocket@{ServerSocket}!getClienteActual@{getClienteActual}}
+\index{getClienteActual@{getClienteActual}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{getClienteActual()}{getClienteActual()}}
+{\footnotesize\ttfamily \label{classServerSocket_a1cad4604560488599b66eebe8d590682} 
+int Server\+Socket\+::get\+Cliente\+Actual (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Getter para obtener el ID del socket activo. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServerSocket_a1cad4604560488599b66eebe8d590682_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classServerSocket_a4659d477cc4d9140064cdaf33c57d3c4}\index{ServerSocket@{ServerSocket}!hayClientesEnCola@{hayClientesEnCola}}
+\index{hayClientesEnCola@{hayClientesEnCola}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{hayClientesEnCola()}{hayClientesEnCola()}}
+{\footnotesize\ttfamily \label{classServerSocket_a4659d477cc4d9140064cdaf33c57d3c4} 
+bool Server\+Socket\+::hay\+Clientes\+En\+Cola (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Verifica si hay personas esperando en la fila. 
+
+\begin{DoxyReturn}{Returns}
+true si la cola no está vacía. Thread-\/\+Safe. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{classServerSocket_a4659d477cc4d9140064cdaf33c57d3c4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classServerSocket_a26559e98b94c989b0011a096d06a163b}\index{ServerSocket@{ServerSocket}!liberarClienteActual@{liberarClienteActual}}
+\index{liberarClienteActual@{liberarClienteActual}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{liberarClienteActual()}{liberarClienteActual()}}
+{\footnotesize\ttfamily \label{classServerSocket_a26559e98b94c989b0011a096d06a163b} 
+void Server\+Socket\+::liberar\+Cliente\+Actual (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Resetea el estado del agente a "{}\+Libre"{}. 
+
+
+\begin{DoxyItemize}
+\item Se llama cuando el cliente actual se desconecta o termina la sesión. 
+\end{DoxyItemize}Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServerSocket_a26559e98b94c989b0011a096d06a163b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classServerSocket_aa2caeb9ab043b2f1f86dd7deeaefa28a}\index{ServerSocket@{ServerSocket}!obtenerNombrePorSocket@{obtenerNombrePorSocket}}
+\index{obtenerNombrePorSocket@{obtenerNombrePorSocket}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{obtenerNombrePorSocket()}{obtenerNombrePorSocket()}}
+{\footnotesize\ttfamily \label{classServerSocket_aa2caeb9ab043b2f1f86dd7deeaefa28a} 
+std\+::string Server\+Socket\+::obtener\+Nombre\+Por\+Socket (\begin{DoxyParamCaption}\item[{int}]{socket\+Buscado}{}\end{DoxyParamCaption})}
+
+
+
+Busca en el vector lista\+Clientes el nombre asociado a un socket. 
+
+Búsqueda lineal en el vector de clientes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & El ID del socket a buscar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El nombre del cliente o "{}\+Desconocido"{}.
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item Itera sobre la lista\+Clientes para encontrar el nombre asociado a un socket. 
+\end{DoxyItemize}Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServerSocket_aa2caeb9ab043b2f1f86dd7deeaefa28a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classServerSocket_a882e25aade6e7c1be34dca9c48340728}\index{ServerSocket@{ServerSocket}!recibir@{recibir}}
+\index{recibir@{recibir}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{recibir()}{recibir()}}
+{\footnotesize\ttfamily \label{classServerSocket_a882e25aade6e7c1be34dca9c48340728} 
+string Server\+Socket\+::recibir (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Recibe datos del cliente que está siendo atendido ACTUALMENTE. 
+
+Lee datos del cliente actual.
+
+
+\begin{DoxyItemize}
+\item Usa memset para limpiar el buffer antes de leer, evitando basura de memoria. 
+\end{DoxyItemize}Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServerSocket_a882e25aade6e7c1be34dca9c48340728_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classServerSocket_a54e233b0852ed5cd338af48353f4868b}\index{ServerSocket@{ServerSocket}!tomarSiguienteCliente@{tomarSiguienteCliente}}
+\index{tomarSiguienteCliente@{tomarSiguienteCliente}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{tomarSiguienteCliente()}{tomarSiguienteCliente()}}
+{\footnotesize\ttfamily \label{classServerSocket_a54e233b0852ed5cd338af48353f4868b} 
+bool Server\+Socket\+::tomar\+Siguiente\+Cliente (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Extrae al siguiente cliente de la cola y lo marca como activo. 
+
+Saca al siguiente cliente de la cola y empieza la sesión.
+
+
+\begin{DoxyItemize}
+\item Thread-\/\+Safe\+: Usa mtx\+Cola. \begin{DoxyReturn}{Returns}
+true si había alguien en la cola y se pudo tomar, false si estaba vacía.
+\end{DoxyReturn}
+
+\item Esta función es llamada por el \textquotesingle{}Main Loop\textquotesingle{}.
+\item CRÍ\+TICO\+: Usa Mutex porque modifica la misma cola que usa \doxylink{classServerSocket_aa3909d8893c14aa0c1498312af89adc1}{aceptar\+Clientes()}. 
+\end{DoxyItemize}Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classServerSocket_a54e233b0852ed5cd338af48353f4868b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{classServerSocket_a54e233b0852ed5cd338af48353f4868b_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classServerSocket_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classServerSocket_a2183a4115ebb3e3bc13fa0f8c35c43f3}\index{ServerSocket@{ServerSocket}!clienteActual@{clienteActual}}
+\index{clienteActual@{clienteActual}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{clienteActual}{clienteActual}}
+{\footnotesize\ttfamily \label{classServerSocket_a2183a4115ebb3e3bc13fa0f8c35c43f3} 
+int Server\+Socket\+::cliente\+Actual\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Socket del cliente que está siendo atendido actualmente (-\/1 si libre). 
+
+\Hypertarget{classServerSocket_af71f918ccba38573d9b3533fc07e28bb}\index{ServerSocket@{ServerSocket}!colaClientes@{colaClientes}}
+\index{colaClientes@{colaClientes}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{colaClientes}{colaClientes}}
+{\footnotesize\ttfamily \label{classServerSocket_af71f918ccba38573d9b3533fc07e28bb} 
+std\+::queue$<$int$>$ Server\+Socket\+::cola\+Clientes}
+
+
+
+Cola de espera "{}\+First-\/\+In, First-\/\+Out"{} (FIFO). 
+
+
+\begin{DoxyItemize}
+\item Almacena los sockets de los clientes que están esperando turno. Es pública para depuración, pero debería accederse con cuidado. 
+\end{DoxyItemize}\Hypertarget{classServerSocket_a4772fc6ab28c449777b8811074ecd56c}\index{ServerSocket@{ServerSocket}!contadorID@{contadorID}}
+\index{contadorID@{contadorID}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{contadorID}{contadorID}}
+{\footnotesize\ttfamily \label{classServerSocket_a4772fc6ab28c449777b8811074ecd56c} 
+int Server\+Socket\+::contador\+ID\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Contador para generar IDs únicos (1, 2, 3...). 
+
+\Hypertarget{classServerSocket_acdbcfe4963922584211482b08022c85b}\index{ServerSocket@{ServerSocket}!listaClientes@{listaClientes}}
+\index{listaClientes@{listaClientes}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{listaClientes}{listaClientes}}
+{\footnotesize\ttfamily \label{classServerSocket_acdbcfe4963922584211482b08022c85b} 
+std\+::vector$<$\mbox{\hyperlink{structInfoCliente}{Info\+Cliente}}$>$ Server\+Socket\+::lista\+Clientes}
+
+
+
+Base de datos en memoria de todos los conectados. 
+
+
+\begin{DoxyItemize}
+\item Se usa para buscar el nombre de un cliente a partir de su socket. 
+\end{DoxyItemize}\Hypertarget{classServerSocket_abefc51098ff2728273fd66cb9c479b5e}\index{ServerSocket@{ServerSocket}!mtxCola@{mtxCola}}
+\index{mtxCola@{mtxCola}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{mtxCola}{mtxCola}}
+{\footnotesize\ttfamily \label{classServerSocket_abefc51098ff2728273fd66cb9c479b5e} 
+std\+::mutex Server\+Socket\+::mtx\+Cola}
+
+
+
+Mutex para proteger la cola de condiciones de carrera. 
+
+
+\begin{DoxyItemize}
+\item Vital porque el Hilo Aceptador (background) mete gente a la cola y el Hilo Principal (Main) saca gente de la cola. Sin esto, el programa crashea. 
+\end{DoxyItemize}\Hypertarget{classServerSocket_a0c3362cb3371c5b521ec51e068ef408d}\index{ServerSocket@{ServerSocket}!serverAddr@{serverAddr}}
+\index{serverAddr@{serverAddr}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{serverAddr}{serverAddr}}
+{\footnotesize\ttfamily \label{classServerSocket_a0c3362cb3371c5b521ec51e068ef408d} 
+sockaddr\+\_\+in Server\+Socket\+::server\+Addr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Configuración de red (IP/\+Puerto). 
+
+\Hypertarget{classServerSocket_a7dcc428768812210c5e00abbd68cd9cc}\index{ServerSocket@{ServerSocket}!serverSocket@{serverSocket}}
+\index{serverSocket@{serverSocket}!ServerSocket@{ServerSocket}}
+\doxysubsubsection{\texorpdfstring{serverSocket}{serverSocket}}
+{\footnotesize\ttfamily \label{classServerSocket_a7dcc428768812210c5e00abbd68cd9cc} 
+int Server\+Socket\+::server\+Socket\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Descriptor del socket principal que escucha ("{}\+El Oído"{}). 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{socket_8h}{socket.\+h}}\item 
+src/\mbox{\hyperlink{socket_8cpp}{socket.\+cpp}}\end{DoxyCompactItemize}

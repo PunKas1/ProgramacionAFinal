@@ -1,3 +1,16 @@
+/**
+ * @file main_cliente.cpp
+ * @author Valencia Cedeño Marcos Gael
+ * @author Peralta Ordóñez Jesús
+ * @author Esteves Flores Andrés
+ * @brief Punto de entrada de la aplicación Cliente (Usuario).
+ * @version 1.0
+ * @date 06/01/2026
+ * * Este archivo maneja la Interfaz Gráfica (SFML) para el usuario final.
+ * * Implementa el protocolo de comunicación (/WAIT, /START) para bloquear
+ * o desbloquear la interacción según la disponibilidad del agente.
+ */
+
 #include "../include/clienteSocket.h"
 #include "../include/chat.h"
 #include <SFML/Graphics.hpp>
@@ -7,49 +20,65 @@
 #include <optional>
 #include <cstdint>
 
-// Variable global atómica para controlar el estado de espera
-// True = Bloqueado (En cola), False = Libre (Atendiendo)
+/**
+ * @brief Bandera de estado compartida entre hilos (Thread-Safe).
+ * * Se usa std::atomic<bool> en lugar de un bool normal para evitar "Condiciones de Carrera".
+ * * True: El cliente está en la cola de espera (Pantalla Bloqueada).
+ * * False: El cliente está siendo atendido (Pantalla Libre).
+ */
 std::atomic<bool> enEspera(true); 
 
 // ================= HILO DE RED =================
+/**
+ * @brief Función del Hilo Secundario: Escucha al servidor.
+ * * Se encarga de recibir mensajes y decidir si son TEXTO para el chat
+ * o COMANDOS para cambiar el estado de la aplicación.
+ */
 void hiloRedCliente(ClienteSocket* cliente, Chat* manager) {
     while (true) {
+        // Bloqueante: Espera a que llegue algo del servidor
         std::string mensaje = cliente->recibir();
         
-        if (mensaje.empty()) continue;
+        if (mensaje.empty()) continue; // Si hay error o vacío, reintentamos
 
-        // --- DETECTAR COMANDOS DEL SERVIDOR ---
+        // --- DETECTAR COMANDOS DEL PROTOCOLO ---
         if (mensaje == "/WAIT") {
-            enEspera = true;
-            // Opcional: Limpiar chat o mostrar aviso en consola
+            // El servidor nos dice que esperemos. Bloqueamos la UI.
+            enEspera = true; 
             std::cout << "[SISTEMA] Puesto en cola de espera.\n";
         }
         else if (mensaje == "/START") {
+            // El servidor nos dice que es nuestro turno. Desbloqueamos la UI.
             enEspera = false;
             std::cout << "[SISTEMA] Agente conectado. Iniciando chat.\n";
-            // Opcional: Reproducir sonido de "Ding" aquí si tienes SFML Audio
         }
         else {
-            // Es un mensaje normal de chat
+            // Si no es comando, es un mensaje de texto normal del Agente.
             manager->agregarMensaje("Soporte", mensaje, false);
         }
     }
 }
 
 // ================= MAIN =================
+/**
+ * @brief Hilo Principal (UI Thread).
+ * * Dibuja la ventana, maneja el input del usuario y renderiza el overlay de bloqueo.
+ */
 int main() {
     ClienteSocket cliente;
     Chat miChat;
 
-    // Intentar conectar
+    // 1. Intentar conectar al servidor (Handshake TCP)
+    // CAMBIAR "127.0.0.1" por la IP del servidor si es remoto.
     if (!cliente.crear() || !cliente.conectar("127.0.0.1", 8080)) {
         std::cerr << "Error: No se pudo conectar al servidor.\n";
         return -1;
     }
 
-    // Iniciar hilo de escucha
-    std::thread red(hiloRedCliente, &cliente, &miChat);
-    red.detach();
+    // 2. Iniciar el hilo de escucha en background
+    // Usamos detach() para que corra libremente sin bloquear la ventana.
+    std::thread read(hiloRedCliente, &cliente, &miChat);
+    read.detach();
 
     // ================= CONFIGURACIÓN SFML 3.0 =================
     sf::ContextSettings settings;
@@ -58,7 +87,7 @@ int main() {
     sf::RenderWindow window(
         sf::VideoMode({450, 700}),
         "Centro de Ayuda - Chat",
-        sf::State::Windowed, // Corrección para SFML 3
+        sf::State::Windowed,
         settings
     );
     window.setFramerateLimit(60);
@@ -76,12 +105,12 @@ int main() {
 
     std::string inputTexto;
 
-    // ================= BUCLE PRINCIPAL =================
+    // ================= BUCLE PRINCIPAL (Game Loop) =================
     while (window.isOpen()) {
         while (auto event = window.pollEvent()) {
             if (event->is<sf::Event::Closed>()) window.close();
 
-            // Scroll manual (Funciona siempre)
+            // Scroll manual (Siempre permitido para leer historial)
             if (const auto* mouseWheel = event->getIf<sf::Event::MouseWheelScrolled>()) {
                 if (mouseWheel->wheel == sf::Mouse::Wheel::Vertical) {
                     currentScrollY -= mouseWheel->delta * 25.f;
@@ -89,17 +118,19 @@ int main() {
                 }
             }
 
-            // Entrada de texto (SOLO SI NO ESTÁ EN ESPERA)
+            // Entrada de texto (CRÍTICO: SOLO SI NO ESTÁ EN ESPERA)
+            // Si enEspera es true, ignoramos lo que escriba el usuario.
             if (!enEspera) {
                 if (const auto* texto = event->getIf<sf::Event::TextEntered>()) {
                     std::uint32_t unicode = texto->unicode;
                     
                     if (unicode == '\n' || unicode == '\r') {
                         if (!inputTexto.empty()) {
+                            // Enviar al servidor y mostrar en pantalla propia
                             cliente.enviar(inputTexto.c_str());
                             miChat.agregarMensaje("Yo", inputTexto, true);
                             inputTexto.clear();
-                            currentScrollY = maxScrollY; // Bajar al final
+                            currentScrollY = maxScrollY; // Auto-scroll al fondo
                         }
                     } 
                     else if (unicode == 8) { // Backspace
@@ -112,7 +143,7 @@ int main() {
             }
         }
 
-        window.clear(sf::Color(240, 242, 245)); // Fondo gris suave
+        window.clear(sf::Color(240, 242, 245)); // Fondo gris suave (Estilo App Moderna)
 
         // 1. --- DIBUJAR MENSAJES (Capa con movimiento) ---
         viewChat.setCenter({225, 350 + currentScrollY});
@@ -146,7 +177,7 @@ int main() {
             y += burbuja.getSize().y + 10.f;
         }
 
-        // Auto-scroll logic
+        // Lógica de límite de scroll
         maxScrollY = (y > 600.f) ? (y - 600.f) : 0;
         if (currentScrollY < maxScrollY && currentScrollY > maxScrollY - 60.f) {
             currentScrollY = maxScrollY;
@@ -171,6 +202,7 @@ int main() {
         footer.setFillColor(sf::Color::White);
         window.draw(footer);
 
+        // Solo dibujamos el texto de entrada si NO estamos bloqueados
         if (!enEspera) {
             sf::Text actual(font, inputTexto.empty() ? "Escribe un mensaje..." : inputTexto + "|", 16);
             actual.setPosition({30, 650});
@@ -178,17 +210,18 @@ int main() {
             window.draw(actual);
         }
 
-        // 3. --- PANTALLA DE BLOQUEO (SI ESTÁ EN COLA) ---
+        // 3. --- PANTALLA DE BLOQUEO (OVERLAY) ---
+        // Si el servidor nos mandó /WAIT, dibujamos esto encima de todo
         if (enEspera) {
-            // Fondo oscuro semitransparente
+            // Fondo oscuro semitransparente (Efecto "Dimming")
             sf::RectangleShape overlay({450.f, 700.f});
-            overlay.setFillColor(sf::Color(0, 0, 0, 200)); 
+            overlay.setFillColor(sf::Color(0, 0, 0, 200)); // Negro con Alpha 200
             window.draw(overlay);
 
             // Mensaje de espera
             sf::Text txtEspera(font, "Nuestros agentes estan ocupados", 20);
             sf::FloatRect bounds = txtEspera.getLocalBounds();
-            txtEspera.setOrigin({bounds.size.x / 2.f, bounds.size.y / 2.f});
+            txtEspera.setOrigin({bounds.size.x / 2.f, bounds.size.y / 2.f}); // Centrado
             txtEspera.setPosition({225.f, 300.f});
             txtEspera.setFillColor(sf::Color::White);
             window.draw(txtEspera);

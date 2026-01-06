@@ -1,0 +1,5 @@
+<map id="ServerSocket::tomarSiguienteCliente" name="ServerSocket::tomarSiguienteCliente">
+<area shape="rect" id="Node000001" title="Extrae al siguiente cliente de la cola y lo marca como activo." alt="" coords="5,5,201,48"/>
+<area shape="rect" id="Node000002" href="$classServerSocket.html#aa2caeb9ab043b2f1f86dd7deeaefa28a" title="Busca en el vector listaClientes el nombre asociado a un socket." alt="" coords="249,5,446,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,24,233,24,233,29,201,29"/>
+</map>

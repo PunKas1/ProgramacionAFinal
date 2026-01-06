@@ -1,0 +1,11 @@
+<map id="src/chat.cpp" name="src/chat.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="67,5,161,32"/>
+<area shape="rect" id="Node000002" href="$chat_8h.html" title=" " alt="" coords="57,80,171,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,33,117,64,111,64,111,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,63,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="102,109,61,146,57,142,98,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="87,155,141,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="117,107,117,139,111,139,111,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="165,155,223,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="130,105,171,142,167,146,126,109"/>
+</map>

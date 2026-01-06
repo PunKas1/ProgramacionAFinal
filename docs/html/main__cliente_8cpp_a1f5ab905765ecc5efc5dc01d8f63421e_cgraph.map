@@ -1,0 +1,9 @@
+<map id="hiloRedCliente" name="hiloRedCliente">
+<area shape="rect" id="Node000001" title="Función del Hilo Secundario: Escucha al servidor." alt="" coords="5,56,112,83"/>
+<area shape="rect" id="Node000002" href="$classChat.html#af53cc83d7d1df84e1952443c6da2554e" title="Inserta un nuevo mensaje en el historial de forma segura." alt="" coords="160,5,309,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,53,170,34,171,39,108,58"/>
+<area shape="rect" id="Node000003" href="$main__cliente_8cpp.html#aac648d18ad9d8ac1b8a0e1c984adae6c" title="Bandera de estado compartida entre hilos (Thread&#45;Safe)." alt="" coords="196,56,272,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="112,67,181,67,181,72,112,72"/>
+<area shape="rect" id="Node000004" href="$classClienteSocket.html#a343c2d9d87d3d7d16bf8c45c92c92590" title="Espera y captura datos provenientes del servidor." alt="" coords="161,107,308,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="108,81,171,99,170,104,107,86"/>
+</map>
